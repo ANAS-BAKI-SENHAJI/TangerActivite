@@ -13,15 +13,13 @@ class Activity extends Model
     protected $fillable = [
         'name',
         'price', 
-        'units', 
         'description', 
-        'images', //should contain several images (Idk if it's possible)
+        'image', //should contain several images (Idk if it's possible)
         'activity_date',
         'activity_time',
         'duration_of_activity',
         'min_number_of_people',
         'max_number_of_people',
-        'average_stars',
         'included_equipment', //boolean
         'included_transport', //boolean
         'equipments_included' //will contain many equipments
