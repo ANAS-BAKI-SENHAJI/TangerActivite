@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('login', 'UserController@login');
+Route::post('register', 'UserController@register');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::group(['middleware' => 'auth:api'], function(){    //Adding the auth:api middleware ensures any calls to the routes in that group must be authenticated.
+    Route::get('/users','UserController@index');
+    Route::get('users/{user}','UserController@show');
+    Route::patch('users/{user}','UserController@update');
+    Route::get('users/{user}/reservations','UserController@showReservations');
+    
 });
