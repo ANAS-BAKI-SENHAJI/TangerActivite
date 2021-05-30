@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -16,10 +15,9 @@ use App\Http\Controllers\UserController;
 
 Route::post('login', 'App\Http\Controllers\UserController@login');
 Route::post('register', 'App\Http\Controllers\UserController@register');
-Route::get('/Activitys', 'App\Http\Controllers\ActivityController@index');
+Route::get('/activities', 'App\Http\Controllers\ActivityController@index');
 Route::post('/upload-file', 'App\Http\Controllers\ActivityController@uploadFile');
-Route::get('/Activitys/{Activity}', 'App\Http\Controllers\ActivityController@show');
-
+Route::get('/activities/{activity}', 'App\Http\Controllers\ActivityController@show');
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // }); //it was already here, and i added the routes down. i dont know if we will need this one
@@ -33,7 +31,5 @@ Route::group(['middleware' => 'auth:api'], function(){    //Adding the auth:api 
     Route::get('users/{user}','App\Http\Controllers\UserController@show');
     Route::patch('users/{user}','App\Http\Controllers\UserController@update');
     Route::get('users/{user}/reservations','App\Http\Controllers\UserController@showReservations');
-    Route::patch('Activitys/{Activity}/units/add','App\Http\Controllers\ActivityController@updateUnits');
-    Route::resource('/Activitys', 'App\Http\Controllers\ActivityController')->except(['index','show']);
-    
+    Route::resource('/activities', 'App\Http\Controllers\ActivityController')->except(['index','show']);
 });
