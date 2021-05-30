@@ -14,7 +14,7 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Activity::all(),200);
     }
 
     /**
@@ -35,7 +35,26 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $activity = Activity::create([
+            'name' => $request->name,
+            'price' => $request->price,
+            'description' => $request->description,
+            'activity_date' => $request->activity_date,
+            'activity_time' => $request->activity_time,
+            'duration_of_activity' => $request->duration_of_activity,
+            'min_number_of_people' => $request->min_number_of_people,
+            'max_number_of_people' => $request->max_number_of_people,
+            'included_equipment' => $request->included_equipment,
+            'included_transport' => $request->included_transport,
+            'equipments_included' => $request->equipments_included,
+            'image' => $request->image
+        ]);
+
+        return response()->json([
+            'status' => (bool) $activity,
+            'data'   => $activity,
+            'message' => $activity ? 'Activity Created!' : 'Error Creating Activity'
+        ]);
     }
 
     /**
@@ -46,7 +65,16 @@ class ActivityController extends Controller
      */
     public function show(Activity $activity)
     {
-        //
+        return response()->json($activity,200);
+    }
+
+    public function uploadFile(Request $request)
+    {
+        if($request->hasFile('image')){
+            $name = time()."_".$request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('images'), $name);
+        }
+        return response()->json(asset("images/$name"),201);
     }
 
     /**
@@ -69,7 +97,14 @@ class ActivityController extends Controller
      */
     public function update(Request $request, Activity $activity)
     {
-        //
+        $status = $activity->update(
+            $request->only(['name', 'price', 'description', 'activity_date', 'activity_time', 'duration_of_activity', 'min_number_of_people', 'max_number_of_people', 'included_equipment', 'included_transport', 'equipments_included', 'image'])
+        );
+
+        return response()->json([
+            'status' => $status,
+            'message' => $status ? 'Activity Updated!' : 'Error Updating Activity'
+        ]);
     }
 
     /**
@@ -80,6 +115,11 @@ class ActivityController extends Controller
      */
     public function destroy(Activity $activity)
     {
-        //
+        $status = $activity->delete();
+
+        return response()->json([
+            'status' => $status,
+            'message' => $status ? 'Activity Deleted!' : 'Error Deleting Activity'
+        ]);
     }
 }
