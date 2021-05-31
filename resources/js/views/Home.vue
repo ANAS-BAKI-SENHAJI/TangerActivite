@@ -35,11 +35,14 @@
             }
         }
     </script>
+
+
+    
      <style scoped>
     .small-text {
         font-size: 14px;
     }
-    .product-box {
+    .activity-box {
         border: 1px solid #cccccc;
         padding: 10px 15px;
     }

@@ -15,9 +15,6 @@ class Activity extends Model
         'price', 
         'description', 
         'image', //should contain several images (Idk if it's possible)
-        'activity_date',
-        'activity_time',
-        'duration_of_activity',
         'min_number_of_people',
         'max_number_of_people',
         'included_equipment', //boolean

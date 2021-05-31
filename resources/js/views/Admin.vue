@@ -8,7 +8,7 @@
                     <div class="col-md-3">
                         <ul style="list-style-type:none">
                             <li class="active"><button class="btn" @click="setComponent('main')">Dashboard</button></li>
-                            <li><button class="btn" @click="setComponent('orders')">Orders</button></li>
+                            <li><button class="btn" @click="setComponent('reservations')">Reservations</button></li>
                             <li><button class="btn" @click="setComponent('activities')">Activities</button></li>
                             <li><button class="btn" @click="setComponent('users')">Users</button></li>
                         </ul>
@@ -25,7 +25,7 @@
     import Main from '../components/admin/Main'
     import Users from '../components/admin/Users'
     import Activities from '../components/admin/Activities'
-    import Orders from '../components/admin/Orders'
+    import Reservations from '../components/admin/Reservations'
 
     export default {
         data() {
@@ -35,7 +35,7 @@
             }
         },
         components: {
-            Main, Users, Activities, Orders
+            Main, Users, Activities, Reservations
         },
         beforeMount() {
             this.setComponent(this.$route.params.page)
@@ -50,9 +50,9 @@
                         this.activeComponent = Users
                         this.$router.push({name: 'admin-pages', params: {page: 'users'}})
                         break;
-                    case "orders":
-                        this.activeComponent = Orders
-                        this.$router.push({name: 'admin-pages', params: {page: 'orders'}})
+                    case "reservations":
+                        this.activeComponent = Reservations
+                        this.$router.push({name: 'admin-pages', params: {page: 'reservations'}})
                         break;
                     case "activities":
                         this.activeComponent = Activities

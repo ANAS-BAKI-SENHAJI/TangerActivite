@@ -37,17 +37,17 @@ const router = new VueRouter({
             name: 'single-activities',
             component: SingleActivity
         },
-        {
-            path: '/confirmation',
-            name: 'confirmation',
-            component: Confirmation
-        },
-        {
-            path: '/checkout',
-            name: 'checkout',
-            component: Checkout,
-            props: (route) => ({ pid: route.query.pid })
-        },
+        // {
+        //     path: '/confirmation',
+        //     name: 'confirmation',
+        //     component: Confirmation
+        // },
+        // {
+        //     path: '/checkout',
+        //     name: 'checkout',
+        //     component: Checkout,
+        //     props: (route) => ({ pid: route.query.pid })
+        // },
         {
             path: '/dashboard',
             name: 'userboard',
