@@ -2,84 +2,68 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reservation;
+use App\Reservation;
+use Auth;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return response()->json(Reservation::with(['activity'])->get(),200);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function deliverreservation(Reservation $reservation)
     {
-        //
+        $reservation->is_delivered = true;
+        $status = $reservation->save();
+
+        return response()->json([
+            'status'    => $status,
+            'data'      => $reservation,
+            'message'   => $status ? 'Reservation Delivered!' : 'Error Delivering Reservation'
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $reservation = Reservation::create([
+            'activity_id' => $request->activity_id,
+            'user_id' => Auth::id(),
+            'reservation_date' => $request->reservation_date,
+            'reservation_time' => $request->reservation_time
+        ]);
+
+        return response()->json([
+            'status' => (bool) $reservation,
+            'data'   => $reservation,
+            'message' => $reservation ? 'Reservation Created!' : 'Error Creating Reservation'
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Reservation  $reservation
-     * @return \Illuminate\Http\Response
-     */
     public function show(Reservation $reservation)
     {
-        //
+        return response()->json($reservation,200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Reservation  $reservation
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Reservation $reservation)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Reservation  $reservation
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Reservation $reservation)
     {
-        //
+        $status = $reservation->update(
+            $request->only(['quantity'])
+        );
+
+        return response()->json([
+            'status' => $status,
+            'message' => $status ? 'Reservation Updated!' : 'Error Updating Reservation'
+        ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Reservation  $reservation
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Reservation $reservation)
     {
-        //
+        $status = $reservation->delete();
+
+        return response()->json([
+            'status' => $status,
+            'message' => $status ? 'Reservation Deleted!' : 'Error Deleting Reservation'
+        ]);
     }
 }

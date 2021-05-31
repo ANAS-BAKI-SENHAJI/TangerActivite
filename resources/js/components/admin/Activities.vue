@@ -14,8 +14,8 @@
                     <tr v-for="(activity,index) in activitys" :key="index" :dblclick="editingItem = activity">
                         <td>{{index+1}}</td>
                         <td v-html="activity.name"></td>
-                        <td v-model="activity.price">{{activity.price}}</td>
-                        <td v-model="activity.description">{{activity.description}}</td>
+                        <!-- <td v-model="activity.price">{{activity.price}}</td>
+                        <td v-model="activity.description">{{activity.description}}</td> -->
                     </tr>
                 </tbody>
             </table>

@@ -32,4 +32,6 @@ Route::group(['middleware' => 'auth:api'], function(){    //Adding the auth:api 
     Route::patch('users/{user}','App\Http\Controllers\UserController@update');
     Route::get('users/{user}/reservations','App\Http\Controllers\UserController@showReservations');
     Route::resource('/activities', 'App\Http\Controllers\ActivityController')->except(['index','show']);
+    Route::patch('reservations/{reservation}/deliver','ReservationController@deliverReservation');
+        Route::resource('/reservations', 'ReservationController');
 });
