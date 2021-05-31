@@ -2791,6 +2791,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['nextUrl'],
   data: function data() {
@@ -2798,7 +2824,11 @@ __webpack_require__.r(__webpack_exports__);
       name: "",
       email: "",
       password: "",
-      password_confirmation: ""
+      password_confirmation: "",
+      phone: "",
+      age: "",
+      country: "",
+      city: ""
     };
   },
   methods: {
@@ -2817,11 +2847,19 @@ __webpack_require__.r(__webpack_exports__);
       var email = this.email;
       var password = this.password;
       var c_password = this.password_confirmation;
+      var phone = this.phone;
+      var age = this.age;
+      var country = this.country;
+      var city = this.city;
       axios.post('api/register', {
         name: name,
         email: email,
         password: password,
-        c_password: c_password
+        c_password: c_password,
+        phone: phone,
+        age: age,
+        country: country,
+        city: city
       }).then(function (response) {
         var data = response.data;
         localStorage.setItem('bigStore.user', JSON.stringify(data.user));
@@ -2940,7 +2978,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       user: null,
-      orders: []
+      reservations: []
     };
   },
   beforeMount: function beforeMount() {
@@ -2949,8 +2987,8 @@ __webpack_require__.r(__webpack_exports__);
     this.user = JSON.parse(localStorage.getItem('bigStore.user'));
     axios.defaults.headers.common['Content-Type'] = 'application/json';
     axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt');
-    axios.get("api/users/".concat(this.user.id, "/orders")).then(function (response) {
-      return _this.orders = response.data;
+    axios.get("api/users/".concat(this.user.id, "/reservations")).then(function (response) {
+      return _this.reservations = response.data;
     });
   }
 });
@@ -3267,7 +3305,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-63cd6604] {\n    font-size: 14px;\n}\n.product-box[data-v-63cd6604] {\n    border: 1px solid #cccccc;\n    padding: 10px 15px;\n}\n.hero-section[data-v-63cd6604] {\n    height: 30vh;\n    background: #ababab;\n    align-items: center;\n    margin-bottom: 20px;\n    margin-top: -20px;\n}\n.title[data-v-63cd6604] {\n    font-size: 60px;\n    color: #ffffff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-63cd6604] {\n    font-size: 14px;\n}\n.activity-box[data-v-63cd6604] {\n    border: 1px solid #cccccc;\n    padding: 10px 15px;\n}\n.hero-section[data-v-63cd6604] {\n    height: 30vh;\n    background: #ababab;\n    align-items: center;\n    margin-bottom: 20px;\n    margin-top: -20px;\n}\n.title[data-v-63cd6604] {\n    font-size: 60px;\n    color: #ffffff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23368,6 +23406,166 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
+              _c("div", { staticClass: "form-group row" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "col-md-4 col-form-label text-md-right",
+                    attrs: { for: "phone" }
+                  },
+                  [_vm._v("Phone")]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.phone,
+                        expression: "phone"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      id: "phone",
+                      type: "tel",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.phone },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.phone = $event.target.value
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group row" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "col-md-4 col-form-label text-md-right",
+                    attrs: { for: "age" }
+                  },
+                  [_vm._v("Age")]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.age,
+                        expression: "age"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      id: "age",
+                      type: "number",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.age },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.age = $event.target.value
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group row" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "col-md-4 col-form-label text-md-right",
+                    attrs: { for: "country" }
+                  },
+                  [_vm._v("Country")]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.country,
+                        expression: "country"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      id: "country",
+                      type: "text",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.country },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.country = $event.target.value
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group row" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "col-md-4 col-form-label text-md-right",
+                    attrs: { for: "city" }
+                  },
+                  [_vm._v("City")]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.city,
+                        expression: "city"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      id: "city",
+                      type: "text",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.city },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.city = $event.target.value
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "form-group row mb-0" }, [
                 _c("div", { staticClass: "col-md-6 offset-md-4" }, [
                   _c(
@@ -23496,26 +23694,26 @@ var render = function() {
           _c(
             "div",
             { staticClass: "row" },
-            _vm._l(_vm.orders, function(order, index) {
+            _vm._l(_vm.reservations, function(reservation, index) {
               return _c(
                 "div",
                 { key: index, staticClass: "col-md-4 activity-box" },
                 [
                   _c("img", {
                     attrs: {
-                      src: order.activity.image,
-                      alt: order.activity.name
+                      src: reservation.activity.image,
+                      alt: reservation.activity.name
                     }
                   }),
                   _vm._v(" "),
                   _c("h5", [
                     _c("span", {
-                      domProps: { innerHTML: _vm._s(order.activity.name) }
+                      domProps: { innerHTML: _vm._s(reservation.activity.name) }
                     }),
                     _c("br"),
                     _vm._v(" "),
                     _c("span", { staticClass: "small-text text-muted" }, [
-                      _vm._v("$ " + _vm._s(order.activity.price))
+                      _vm._v("$ " + _vm._s(reservation.activity.price))
                     ])
                   ]),
                   _vm._v(" "),
@@ -23524,13 +23722,15 @@ var render = function() {
                   _c("span", { staticClass: "small-text text-muted" }, [
                     _vm._v(
                       "Quantity: " +
-                        _vm._s(order.quantity) +
+                        _vm._s(reservation.quantity) +
                         "\n                            "
                     ),
                     _c("span", { staticClass: "float-right" }, [
                       _vm._v(
                         _vm._s(
-                          order.is_delivered == 1 ? "shipped!" : "not shipped"
+                          reservation.is_delivered == 1
+                            ? "shipped!"
+                            : "not shipped"
                         )
                       )
                     ])
@@ -23543,7 +23743,7 @@ var render = function() {
                     _c("strong", [_vm._v("Delivery address:")]),
                     _vm._v(" "),
                     _c("br"),
-                    _vm._v(_vm._s(order.address))
+                    _vm._v(_vm._s(reservation.address))
                   ])
                 ]
               )
@@ -23566,7 +23766,7 @@ var staticRenderFns = [
         staticClass:
           "container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto"
       },
-      [_c("h2", { staticClass: "title" }, [_vm._v("All your orders")])]
+      [_c("h2", { staticClass: "title" }, [_vm._v("All your reservations")])]
     )
   }
 ]

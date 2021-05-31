@@ -1,24 +1,24 @@
  <template>
         <div>
             <div class="container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto">
-                <h2 class="title">All your orders</h2>
+                <h2 class="title">All your reservations</h2>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <br>
                         <div class="row">
-                            <div class="col-md-4 activity-box" v-for="(order,index) in orders" :key="index">
-                                <img :src="order.activity.image" :alt="order.activity.name">
-                                <h5><span v-html="order.activity.name"></span><br>
-                                    <span class="small-text text-muted">$ {{order.activity.price}}</span>
+                            <div class="col-md-4 activity-box" v-for="(reservation,index) in reservations" :key="index">
+                                <img :src="reservation.activity.image" :alt="reservation.activity.name">
+                                <h5><span v-html="reservation.activity.name"></span><br>
+                                    <span class="small-text text-muted">$ {{reservation.activity.price}}</span>
                                 </h5>
                                 <hr>
-                                <span class="small-text text-muted">Quantity: {{order.quantity}}
-                                    <span class="float-right">{{order.is_delivered == 1? "shipped!" : "not shipped"}}</span>
+                                <span class="small-text text-muted">Quantity: {{reservation.quantity}}
+                                    <span class="float-right">{{reservation.is_delivered == 1? "shipped!" : "not shipped"}}</span>
                                 </span>
                                 <br><br>
-                                <p><strong>Delivery address:</strong> <br>{{order.address}}</p>
+                                <p><strong>Delivery address:</strong> <br>{{reservation.address}}</p>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
         data() {
             return {
                 user : null,
-                orders : []
+                reservations : []
             }
         },
         beforeMount() {
@@ -48,8 +48,8 @@
             axios.defaults.headers.common['Content-Type'] = 'application/json'
             axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt')
 
-            axios.get(`api/users/${this.user.id}/orders`)
-                 .then(response => this.orders = response.data)
+            axios.get(`api/users/${this.user.id}/reservations`)
+                 .then(response => this.reservations = response.data)
         }
     }
     </script>
