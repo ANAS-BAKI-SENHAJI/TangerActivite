@@ -4,15 +4,15 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-// import App from './views/App'
-import Home from './Home'
-// import Login from './views/Login'
-// import Register from './views/Register'
-import SingleActivity from './SingleActivity'
+import App from './views/App'
+import Home from './views/Home'
+import Login from './views/Login'
+import Register from './views/Register'
+import SingleActivity from './views/SingleActivity'
 // import Checkout from './views/Checkout'
 // import Confirmation from './views/Confirmation'
-// import UserBoard from './views/UserBoard'
-// import Admin from './views/Admin'
+import UserBoard from './views/UserBoard'
+import Admin from './views/Admin'
 
 const router = new VueRouter({
     mode: 'history',
