@@ -1,7 +1,7 @@
  <template>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 offset-md-2">
+                <div class="col-md-8 offset-md-2" >
                     <img :src="activity.image" :alt="activity.name">
                     <h3 class="title" v-html="activity.name"></h3>
                     <p class="text-muted">{{activity.description}}</p>
@@ -28,6 +28,7 @@
             let url = `/api/activities/${this.$route.params.id}`
             axios.get(url).then(response => this.activity = response.data)      
         }
+        
     }
     </script>
 

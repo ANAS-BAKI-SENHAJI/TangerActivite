@@ -52,7 +52,7 @@
                         axios.post('api/login', {email, password}).then(response => {
                             let user = response.data.user
                             let is_admin = user.is_admin
-
+                        
                             localStorage.setItem('bigStore.user', JSON.stringify(user))
                             localStorage.setItem('bigStore.jwt', response.data.token)
 
@@ -68,5 +68,5 @@
                     }
                 }
             }
-        }
+        } 
     </script>
