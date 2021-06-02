@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-md-4 activity-box" v-for="(activity,index) in activities" :key="index">
                                 <router-link :to="{ path: '/activities/'+activity.id}">
-                                    <img :src="activity.image" :alt="activity.name">
+                                    <img class="im" :src="activity.image" :alt="activity.name">
                                     <h5><span v-html="activity.name"></span>
                                         <span class="small-text text-muted float-right">$ {{activity.price}}</span>
                                     </h5>
@@ -56,5 +56,8 @@
     .title {
         font-size: 60px;
         color: #ffffff;
+    }
+    .im{
+        width: 200px;
     }
     </style>

@@ -1,4 +1,12 @@
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
 require('./bootstrap');
+
+window.Vue = require('vue').default;
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -37,17 +45,17 @@ const router = new VueRouter({
             name: 'single-activities',
             component: SingleActivity
         },
-         {
-             path: '/confirmation',
-             name: 'confirmation',
-             component: Confirmation
-         },
-         {
-             path: '/checkout',
-             name: 'checkout',
-             component: Checkout,
-             props: (route) => ({ pid: route.query.pid })
-         },
+        {
+            path: '/confirmation',
+            name: 'confirmation',
+            component: Confirmation
+        },
+        {
+            path: '/checkout',
+            name: 'checkout',
+            component: Checkout,
+            props: (route) => ({ pid: route.query.pid })
+        },
         {
             path: '/dashboard',
             name: 'userboard',
@@ -109,7 +117,6 @@ router.beforeEach((to, from, next) => {
         next()
     }
 })
-
 const app = new Vue({
     el: '#app',
     components: { App },

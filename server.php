@@ -1,5 +1,5 @@
 <?php
-
+define('WP_MEMORY_LIMIT','64M');
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

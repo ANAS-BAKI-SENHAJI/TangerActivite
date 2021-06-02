@@ -18,8 +18,6 @@ class CreateActivitiesTable extends Migration
             $table->string('name');
             $table->double('price');
             $table->string('description');
-            $table->date('activity_date');
-            $table->time('activity_time');
             $table->string('duration_of_activity');
             $table->integer('min_number_of_people');
             $table->integer('max_number_of_people');
