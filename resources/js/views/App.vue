@@ -14,8 +14,8 @@
                             <router-link :to="{ name: 'login' }" class="nav-link" v-if="!isLoggedIn">Login</router-link>
                             <router-link :to="{ name: 'register' }" class="nav-link" v-if="!isLoggedIn">Register</router-link>
                             <span v-if="isLoggedIn">
-                                <router-link :to="{ name: 'userboard' }" class="nav-link" v-if="user_type == 0"> Hi, {{name}}</router-link>
-                                <router-link :to="{ name: 'admin' }" class="nav-link" v-if="user_type == 1"> Hi, {{name}}</router-link>
+                                <router-link :to="{ name: 'userboard' }" class="nav-link" v-if="user_type == 0"> {{name}}</router-link>
+                                <router-link :to="{ name: 'admin' }" class="nav-link" v-if="user_type == 1"> {{name}}</router-link>
                             </span>
                             <li class="nav-link" v-if="isLoggedIn" @click="logout"> Logout</li>
                         </ul>
@@ -60,3 +60,20 @@
         }
     }
     </script>
+    <style scoped>
+    .navbar{
+        background: black;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: white;
+    }
+    .navbar-brand{
+        color: white;
+    }
+    .py-4{
+        padding-bottom: 0 !important ;
+    }
+    .navbar-toggler-icon{
+        color: white;
+    }
+    </style>
