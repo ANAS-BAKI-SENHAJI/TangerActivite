@@ -14,11 +14,11 @@
                                     <span class="small-text text-muted">$ {{reservation.activity.price}}</span>
                                 </h5>
                                 <hr>
-                                <span class="small-text text-muted">Quantity: {{reservation.quantity}}
-                                    <span class="float-right">{{reservation.is_delivered == 1? "shipped!" : "not shipped"}}</span>
+                                <span class="small-text text-muted">Reservation Date: {{reservation.reservation_date}}
+                                    <span class="float-right">{{reservation.is_delivered == 1? "finished!" : "not finished"}}</span>
                                 </span>
                                 <br><br>
-                                <p><strong>Delivery address:</strong> <br>{{reservation.address}}</p>
+                                <p><strong>Reservation Time: </strong> <br>{{reservation.reservation_time}}</p>
                             </div>
                         </div>
                     </div>

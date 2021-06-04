@@ -8,7 +8,7 @@
                     <div class="col-md-3">
                         <ul style="list-style-type:none">
                             <li class="active"><button class="btn" @click="setComponent('main')">Dashboard</button></li>
-                            <li><button class="btn" @click="setComponent('reservations')">Reservations</button></li> -->
+                            <li><button class="btn" @click="setComponent('reservations')">Reservations</button></li>
                             <li><button class="btn" @click="setComponent('activities')">Activities</button></li>
                             <li><button class="btn" @click="setComponent('users')">Users</button></li>
                         </ul>

@@ -8,7 +8,6 @@
                     <div class="modal-body">
                         <slot name="body">
                             Name: <input type="text" v-model="data.name">
-                            Units: <input type="text" v-model="data.units">
                             Price: <input type="text" v-model="data.price">
                             <textarea v-model="data.description" placeholder="description"></textarea>
                             <span >
@@ -77,7 +76,9 @@
         transform: scale(1.1);
     }
     </style>
-      <script>
+
+
+    <script>
     export default {
         props: ['activity'],
         data() {
@@ -92,7 +93,6 @@
                 }
                 return {
                     name: "",
-                    units: "",
                     price: "",
                     description: "",
                     image: false

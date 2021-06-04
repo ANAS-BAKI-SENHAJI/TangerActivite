@@ -5,10 +5,10 @@
                     <tr>
                         <td></td>
                         <td>Activity</td>
-                        <td>reservation_date</td>
+                        <td>Reservation_date</td>
                         <td>Prix</td>
-                        <td>reservation_time</td>
-                        <td>is Delivered?</td>
+                        <td>Reservation_time</td>
+                        <td>is Finished?</td>
                         <td>Action</td>
                     </tr>
                 </thead>
@@ -20,7 +20,7 @@
                         <td>{{reservation.activity.price}}</td>
                         <td>{{reservation.reservation_time}}</td>
                         <td>{{reservation.is_delivered == 1? "Yes" : "No"}}</td>
-                        <td v-if="reservation.is_delivered == 0"><button class="btn btn-success" @click="deliver(index)">Deliver</button></td>
+                        <td v-if="reservation.is_delivered == 0"><button class="btn btn-success" @click="deliver(index)">Finish</button></td>
                     </tr>
                 </tbody>
             </table>

@@ -1,10 +1,10 @@
 <?php
-
 namespace Database\Seeders;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 use DateTime;
+use Illuminate\Support\Facades\Date;
 
 
 class ActivitiesTableSeeder extends Seeder
@@ -18,6 +18,7 @@ class ActivitiesTableSeeder extends Seeder
     {
         $activities = [
             [
+            
                 'name' => "paintball",
                 'price' => 200.10,
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',

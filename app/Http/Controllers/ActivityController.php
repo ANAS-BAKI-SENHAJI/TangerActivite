@@ -22,11 +22,8 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
-
+    
+     
     /**
      * Store a newly created resource in storage.
      *
@@ -39,8 +36,6 @@ class ActivityController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'description' => $request->description,
-            'activity_date' => $request->activity_date,
-            'activity_time' => $request->activity_time,
             'duration_of_activity' => $request->duration_of_activity,
             'min_number_of_people' => $request->min_number_of_people,
             'max_number_of_people' => $request->max_number_of_people,
@@ -83,10 +78,7 @@ class ActivityController extends Controller
      * @param  \App\Models\Activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function edit(Activity $activity)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
@@ -98,7 +90,7 @@ class ActivityController extends Controller
     public function update(Request $request, Activity $activity)
     {
         $status = $activity->update(
-            $request->only(['name', 'price', 'description', 'activity_date', 'activity_time', 'duration_of_activity', 'min_number_of_people', 'max_number_of_people', 'included_equipment', 'included_transport', 'equipments_included', 'image'])
+            $request->only(['name', 'price', 'description', 'duration_of_activity', 'min_number_of_people', 'max_number_of_people', 'included_equipment', 'included_transport', 'equipments_included', 'image'])
         );
 
         return response()->json([

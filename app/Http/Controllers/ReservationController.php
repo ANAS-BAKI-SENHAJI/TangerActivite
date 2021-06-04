@@ -12,7 +12,7 @@ class ReservationController extends Controller
     {
         return response()->json(Reservation::with(['activity'])->get(),200);
     }
-    public function deliverreservation(Reservation $reservation)
+    public function deliverReservation(Reservation $reservation)
     {
         $reservation->is_delivered = true;
         $status = $reservation->save();
@@ -48,7 +48,7 @@ class ReservationController extends Controller
     public function update(Request $request, Reservation $reservation)
     {
         $status = $reservation->update(
-            $request->only(['quantity'])
+            $request->only(['reservation_date','reservation_time'])
         );
 
         return response()->json([
