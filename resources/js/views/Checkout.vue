@@ -8,20 +8,10 @@
                         <p class="small-text text-muted float-left">$ {{activity.price}}</p>
                         <br>
                         <hr>
-
-                        <label class="row">
-                            <span class="col-md-2 float-left">Reservation Date: </span>
-                            <input name="reservation_date" class="col-md-2 float-left" v-model="reservation_date" >
-                        </label>
-                        
-                        <div class="row">
-                                <label for="reservation_time" class="col-md-3 col-form-label">Reservation Time:</label>
-                                <div class="col-md-9">
-                                    <input id="reservation_time" class="form-control" required>
-                                </div>
-                        </div>
                     </div>
                     <br>
+
+                    
                     <div>
                         <div v-if="!isLoggedIn">
                             <h2>You need to login to continue</h2>
@@ -30,7 +20,17 @@
                         </div>
                         <div v-if="isLoggedIn">
 
-                            
+                            <label class="row">
+                                <span class="col-md-2 float-left">Reservation Date: </span>
+                                <input type="date" name="reservation_date" class="col-md-2 float-left" v-model="reservation_date" >
+                            </label>
+                        
+                            <div class="row">
+                                    <label for="reservation_time" class="col-md-3 col-form-label">Reservation Time:</label>
+                                    <div class="col-md-9">
+                                        <input id="reservation_time" type="time" class="form-control" v-model="reservation_time" required>
+                                    </div>
+                            </div>
                             
                             <br>
                             <button class="col-md-4 btn btn-sm btn-success float-right" v-if="isLoggedIn" @click="placeReservation">Continue</button>
@@ -52,9 +52,9 @@
         props : ['pid'],
         data(){
             return {
-                
-                reservation_date : "",
                 reservation_time : "",
+                reservation_date : "",
+                
                  
                 isLoggedIn : null,
                 activity : []
