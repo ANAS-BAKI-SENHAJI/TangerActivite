@@ -9,6 +9,7 @@
                             </td>
                             <td width="25%">
                                 <h3 class="title sizing" v-html="activity.name"></h3>
+                                <p class="sizing font-weight-large">Durée d'activite: {{activity.duration_of_activity}}</p>
                             </td>  
                         </tr>  
                         <tr>
@@ -38,7 +39,10 @@
                             <td><img src="/tr.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;transport inclus: {{activity.included_transport}}</span></td>
                         </tr>
                     </table>
-
+                    <br>
+                    <hr>
+                    <h5>les équipment inclus</h5>
+                    <p class="small-text text-muted float-left">{{activity.equipments_included}}</p>
                     <br>
                     <router-link :to="{ path: '/checkout?pid='+activity.id }" class="col-md-4 btn btn-sm btn-primary float-right">Reserver</router-link>
                 </div>

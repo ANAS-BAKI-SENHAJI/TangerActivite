@@ -2973,6 +2973,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -41855,7 +41859,14 @@ var render = function() {
                 _c("h3", {
                   staticClass: "title sizing",
                   domProps: { innerHTML: _vm._s(_vm.activity.name) }
-                })
+                }),
+                _vm._v(" "),
+                _c("p", { staticClass: "sizing font-weight-large" }, [
+                  _vm._v(
+                    "Durée d'activite: " +
+                      _vm._s(_vm.activity.duration_of_activity)
+                  )
+                ])
               ])
             ]),
             _vm._v(" "),
@@ -41951,6 +41962,16 @@ var render = function() {
                 )
               ])
             ])
+          ]),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("hr"),
+          _vm._v(" "),
+          _c("h5", [_vm._v("les équipment inclus")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "small-text text-muted float-left" }, [
+            _vm._v(_vm._s(_vm.activity.equipments_included))
           ]),
           _vm._v(" "),
           _c("br"),
