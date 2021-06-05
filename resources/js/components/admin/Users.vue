@@ -7,7 +7,7 @@
                         <td>Name</td>
                         <td>Email</td>
                         <td>Joined</td>
-                        <td>Total Orders</td>
+                        <td>Total Reservations</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -16,7 +16,7 @@
                         <td>{{user.name}}</td>
                         <td>{{user.email}}</td>
                         <td>{{user.created_at}}</td>
-                        <td>{{user.orders.length}}</td>
+                        <td>{{user.reservations.length}}</td>
                     </tr>
                 </tbody>
             </table>

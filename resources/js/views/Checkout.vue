@@ -6,12 +6,12 @@
                         <img :src="activity.image" :alt="activity.name">
                         <h2 class="title" v-html="activity.name"></h2>
                         <p class="small-text text-muted float-left">$ {{activity.price}}</p>
-                        <p class="small-text text-muted float-right">Available Units: {{activity.units}}</p>
                         <br>
                         <hr>
-                        <label class="row"><span class="col-md-2 float-left">Quantity: </span><input type="number" name="units" min="1" :max="activity.units" class="col-md-2 float-left" v-model="quantity" @change="checkUnits"></label>
                     </div>
                     <br>
+
+                    
                     <div>
                         <div v-if="!isLoggedIn">
                             <h2>You need to login to continue</h2>
@@ -19,14 +19,21 @@
                             <button class="col-md-4 btn btn-danger float-right" @click="register">Create an account</button>
                         </div>
                         <div v-if="isLoggedIn">
+
+                            <label class="row">
+                                <span class="col-md-2 float-left">Reservation Date: </span>
+                                <input type="date" name="reservation_date" class="col-md-2 float-left" v-model="reservation_date" >
+                            </label>
+                        
                             <div class="row">
-                                <label for="address" class="col-md-3 col-form-label">Delivery Address</label>
-                                <div class="col-md-9">
-                                    <input id="address" type="text" class="form-control" v-model="address" required>
-                                </div>
+                                    <label for="reservation_time" class="col-md-3 col-form-label">Reservation Time:</label>
+                                    <div class="col-md-9">
+                                        <input id="reservation_time" type="time" class="form-control" v-model="reservation_time" required>
+                                    </div>
                             </div>
+                            
                             <br>
-                            <button class="col-md-4 btn btn-sm btn-success float-right" v-if="isLoggedIn" @click="placereseRvation">Continue</button>
+                            <button class="col-md-4 btn btn-sm btn-success float-right" v-if="isLoggedIn" @click="placeReservation">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -45,8 +52,10 @@
         props : ['pid'],
         data(){
             return {
-                address : "",
-                quantity : 1,
+                reservation_time : "",
+                reservation_date : "",
+                
+                 
                 isLoggedIn : null,
                 activity : []
             }
@@ -73,18 +82,14 @@
             placeReservation(e) {
                 e.preventDefault()
 
-                let address = this.address
+                let reservation_time= this.reservation_time
                 let activity_id = this.activity.id
-                let quantity = this.quantity
+                let reservation_date = this.reservation_date
 
-                axios.post('api/reservations/', {address, quantity, activity_id})
+                axios.post('api/reservations/', {reservation_time, reservation_date, activity_id})
                      .then(response => this.$router.push('/confirmation'))
-            },
-            checkUnits(e){
-                if (this.quantity > this.activity.units) {
-                    this.quantity = this.activity.units
-                }
             }
+            
         }
     }
     </script>

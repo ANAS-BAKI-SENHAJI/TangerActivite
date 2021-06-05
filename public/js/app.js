@@ -1873,6 +1873,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -1896,7 +1897,6 @@ __webpack_require__.r(__webpack_exports__);
     newActivity: function newActivity() {
       this.addingActivity = {
         name: null,
-        units: null,
         price: null,
         image: null,
         description: null
@@ -1908,12 +1908,10 @@ __webpack_require__.r(__webpack_exports__);
       this.editingItem = null;
       var index = this.activities.indexOf(activity);
       var name = activity.name;
-      var units = activity.units;
       var price = activity.price;
       var description = activity.description;
       axios.put("/api/activities/".concat(activity.id), {
         name: name,
-        units: units,
         price: price,
         description: description
       }).then(function (response) {
@@ -1925,13 +1923,11 @@ __webpack_require__.r(__webpack_exports__);
 
       this.addingActivity = null;
       var name = activity.name;
-      var units = activity.units;
       var price = activity.price;
       var description = activity.description;
       var image = activity.image;
       axios.post("/api/activities/", {
         name: name,
-        units: units,
         price: price,
         description: description,
         image: image
@@ -2034,6 +2030,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['activity'],
   data: function data() {
@@ -2049,7 +2046,6 @@ __webpack_require__.r(__webpack_exports__);
 
       return {
         name: "",
-        units: "",
         price: "",
         description: "",
         image: false
@@ -2115,7 +2111,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       user: null,
-      orders: [],
+      reservations: [],
       activities: [],
       users: []
     };
@@ -2129,8 +2125,8 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/api/activities/').then(function (response) {
       return _this.activities = response.data;
     });
-    axios.get('/api/orders/').then(function (response) {
-      return _this.orders = response.data;
+    axios.get('/api/reservations/').then(function (response) {
+      return _this.reservations = response.data;
     });
   }
 });
@@ -2493,12 +2489,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['pid'],
   data: function data() {
     return {
-      address: "",
-      quantity: 1,
+      reservation_time: "",
+      reservation_date: "",
       isLoggedIn: null,
       activity: []
     };
@@ -2540,21 +2543,16 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       e.preventDefault();
-      var address = this.address;
+      var reservation_time = this.reservation_time;
       var activity_id = this.activity.id;
-      var quantity = this.quantity;
+      var reservation_date = this.reservation_date;
       axios.post('api/reservations/', {
-        address: address,
-        quantity: quantity,
+        reservation_time: reservation_time,
+        reservation_date: reservation_date,
         activity_id: activity_id
       }).then(function (response) {
         return _this2.$router.push('/confirmation');
       });
-    },
-    checkUnits: function checkUnits(e) {
-      if (this.quantity > this.activity.units) {
-        this.quantity = this.activity.units;
-      }
     }
   }
 });
@@ -7739,7 +7737,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.big-text[data-v-137c6ca4] { font-size: 28px;\n}\n.product-box[data-v-137c6ca4] { border: 1px solid #cccccc; padding: 10px 15px; height: 20vh\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.big-text[data-v-137c6ca4] { font-size: 28px;\n}\n.activity-box[data-v-137c6ca4] { border: 1px solid #cccccc; padding: 10px 15px; height: 20vh\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40135,14 +40133,42 @@ var render = function() {
         _vm._v(" "),
         _c(
           "tbody",
-          _vm._l(_vm.activitys, function(activity, index) {
+          _vm._l(_vm.activities, function(activity, index) {
             return _c(
               "tr",
               { key: index, attrs: { dblclick: (_vm.editingItem = activity) } },
               [
                 _c("td", [_vm._v(_vm._s(index + 1))]),
                 _vm._v(" "),
-                _c("td", { domProps: { innerHTML: _vm._s(activity.name) } })
+                _c("td", { domProps: { innerHTML: _vm._s(activity.name) } }),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  {
+                    model: {
+                      value: activity.price,
+                      callback: function($$v) {
+                        _vm.$set(activity, "price", $$v)
+                      },
+                      expression: "activity.price"
+                    }
+                  },
+                  [_vm._v(_vm._s(activity.price))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  {
+                    model: {
+                      value: activity.description,
+                      callback: function($$v) {
+                        _vm.$set(activity, "description", $$v)
+                      },
+                      expression: "activity.description"
+                    }
+                  },
+                  [_vm._v(_vm._s(activity.description))]
+                )
               ]
             )
           }),
@@ -40168,19 +40194,19 @@ var render = function() {
           {
             name: "show",
             rawName: "v-show",
-            value: _vm.addingactivity != null,
-            expression: "addingactivity != null"
+            value: _vm.addingActivity != null,
+            expression: "addingActivity != null"
           }
         ],
-        attrs: { activity: _vm.addingactivity },
-        on: { close: _vm.addactivity }
+        attrs: { activity: _vm.addingActivity },
+        on: { close: _vm.addActivity }
       }),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", on: { click: _vm.newactivity } },
+        { staticClass: "btn btn-primary", on: { click: _vm.newActivity } },
         [_vm._v("Add New activity")]
       )
     ],
@@ -40197,8 +40223,6 @@ var staticRenderFns = [
         _c("td"),
         _vm._v(" "),
         _c("td", [_vm._v("activity")]),
-        _vm._v(" "),
-        _c("td", [_vm._v("Units")]),
         _vm._v(" "),
         _c("td", [_vm._v("Price")]),
         _vm._v(" "),
@@ -40258,27 +40282,6 @@ var render = function() {
                         return
                       }
                       _vm.$set(_vm.data, "name", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v("\n                    Units: "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.data.units,
-                      expression: "data.units"
-                    }
-                  ],
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.data.units },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.data, "units", $event.target.value)
                     }
                   }
                 }),
@@ -40404,11 +40407,11 @@ var render = function() {
       "div",
       {
         staticClass:
-          "col-md-4 product-box d-flex align-content-center justify-content-center flex-wrap big-text"
+          "col-md-4 activity-box d-flex align-content-center justify-content-center flex-wrap big-text"
       },
       [
-        _c("a", { attrs: { href: "/admin/orders" } }, [
-          _vm._v("Orders (" + _vm._s(_vm.orders.length) + ")")
+        _c("a", { attrs: { href: "/admin/reservations" } }, [
+          _vm._v("Reservations (" + _vm._s(_vm.reservations.length) + ")")
         ])
       ]
     ),
@@ -40419,7 +40422,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "col-md-4 product-box d-flex align-content-center justify-content-center flex-wrap big-text"
+          "col-md-4 activity-box d-flex align-content-center justify-content-center flex-wrap big-text"
       },
       [
         _c("a", { attrs: { href: "/admin/activities" } }, [
@@ -40432,7 +40435,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "col-md-4 product-box d-flex align-content-center justify-content-center flex-wrap big-text"
+          "col-md-4 activity-box d-flex align-content-center justify-content-center flex-wrap big-text"
       },
       [
         _c("a", { attrs: { href: "/admin/users" } }, [
@@ -40501,7 +40504,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Deliver")]
+                    [_vm._v("Finish")]
                   )
                 ])
               : _vm._e()
@@ -40523,13 +40526,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("td", [_vm._v("Activity")]),
         _vm._v(" "),
-        _c("td", [_vm._v("reservation_date")]),
+        _c("td", [_vm._v("Reservation_date")]),
         _vm._v(" "),
         _c("td", [_vm._v("Prix")]),
         _vm._v(" "),
-        _c("td", [_vm._v("reservation_time")]),
+        _c("td", [_vm._v("Reservation_time")]),
         _vm._v(" "),
-        _c("td", [_vm._v("is Delivered?")]),
+        _c("td", [_vm._v("is Finished?")]),
         _vm._v(" "),
         _c("td", [_vm._v("Action")])
       ])
@@ -40574,7 +40577,7 @@ var render = function() {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(user.created_at))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(user.orders.length))])
+            _c("td", [_vm._v(_vm._s(user.reservations.length))])
           ])
         }),
         0
@@ -40597,7 +40600,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("td", [_vm._v("Joined")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Total Orders")])
+        _c("td", [_vm._v("Total Reservations")])
       ])
     ])
   }
@@ -40660,7 +40663,7 @@ var render = function() {
                 [_vm._v("Reservations")]
               )
             ]),
-            _vm._v(" -->\n                    "),
+            _vm._v(" "),
             _c("li", [
               _c(
                 "button",
@@ -40912,46 +40915,9 @@ var render = function() {
             _vm._v("$ " + _vm._s(_vm.activity.price))
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "small-text text-muted float-right" }, [
-            _vm._v("Available Units: " + _vm._s(_vm.activity.units))
-          ]),
-          _vm._v(" "),
           _c("br"),
           _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c("label", { staticClass: "row" }, [
-            _c("span", { staticClass: "col-md-2 float-left" }, [
-              _vm._v("Quantity: ")
-            ]),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.quantity,
-                  expression: "quantity"
-                }
-              ],
-              staticClass: "col-md-2 float-left",
-              attrs: {
-                type: "number",
-                name: "units",
-                min: "1",
-                max: _vm.activity.units
-              },
-              domProps: { value: _vm.quantity },
-              on: {
-                change: _vm.checkUnits,
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.quantity = $event.target.value
-                }
-              }
-            })
-          ])
+          _c("hr")
         ]),
         _vm._v(" "),
         _c("br"),
@@ -40983,14 +40949,42 @@ var render = function() {
           _vm._v(" "),
           _vm.isLoggedIn
             ? _c("div", [
+                _c("label", { staticClass: "row" }, [
+                  _c("span", { staticClass: "col-md-2 float-left" }, [
+                    _vm._v("Reservation Date: ")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reservation_date,
+                        expression: "reservation_date"
+                      }
+                    ],
+                    staticClass: "col-md-2 float-left",
+                    attrs: { type: "date", name: "reservation_date" },
+                    domProps: { value: _vm.reservation_date },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.reservation_date = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c(
                     "label",
                     {
                       staticClass: "col-md-3 col-form-label",
-                      attrs: { for: "address" }
+                      attrs: { for: "reservation_time" }
                     },
-                    [_vm._v("Delivery Address")]
+                    [_vm._v("Reservation Time:")]
                   ),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-9" }, [
@@ -40999,19 +40993,23 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.address,
-                          expression: "address"
+                          value: _vm.reservation_time,
+                          expression: "reservation_time"
                         }
                       ],
                       staticClass: "form-control",
-                      attrs: { id: "address", type: "text", required: "" },
-                      domProps: { value: _vm.address },
+                      attrs: {
+                        id: "reservation_time",
+                        type: "time",
+                        required: ""
+                      },
+                      domProps: { value: _vm.reservation_time },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.address = $event.target.value
+                          _vm.reservation_time = $event.target.value
                         }
                       }
                     })
@@ -41026,7 +41024,7 @@ var render = function() {
                       {
                         staticClass:
                           "col-md-4 btn btn-sm btn-success float-right",
-                        on: { click: _vm.placereseRvation }
+                        on: { click: _vm.placeReservation }
                       },
                       [_vm._v("Continue")]
                     )
@@ -42053,16 +42051,16 @@ var render = function() {
                   _vm._v(" "),
                   _c("span", { staticClass: "small-text text-muted" }, [
                     _vm._v(
-                      "Quantity: " +
-                        _vm._s(reservation.quantity) +
+                      "Reservation Date: " +
+                        _vm._s(reservation.reservation_date) +
                         "\n                            "
                     ),
                     _c("span", { staticClass: "float-right" }, [
                       _vm._v(
                         _vm._s(
                           reservation.is_delivered == 1
-                            ? "shipped!"
-                            : "not shipped"
+                            ? "finished!"
+                            : "not finished"
                         )
                       )
                     ])
@@ -42072,10 +42070,10 @@ var render = function() {
                   _c("br"),
                   _vm._v(" "),
                   _c("p", [
-                    _c("strong", [_vm._v("Delivery address:")]),
+                    _c("strong", [_vm._v("Reservation Time: ")]),
                     _vm._v(" "),
                     _c("br"),
-                    _vm._v(_vm._s(reservation.address))
+                    _vm._v(_vm._s(reservation.reservation_time))
                   ])
                 ]
               )
