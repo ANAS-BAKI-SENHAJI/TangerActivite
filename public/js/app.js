@@ -41863,7 +41863,7 @@ var render = function() {
                   domProps: { innerHTML: _vm._s(_vm.activity.name) }
                 }),
                 _vm._v(" "),
-                _c("p", { staticClass: "sizing font-weight-large" }, [
+                _c("p", { staticClass: "sizing " }, [
                   _vm._v(
                     "Durée d'activite: " +
                       _vm._s(_vm.activity.duration_of_activity)
@@ -41874,7 +41874,7 @@ var render = function() {
             _vm._v(" "),
             _c("tr", [
               _c("td", { attrs: { width: "50%" } }, [
-                _c("p", { staticClass: "text-muted sizing" }, [
+                _c("p", { staticClass: "font-weight-normal sizing" }, [
                   _vm._v(_vm._s(_vm.activity.description))
                 ])
               ])
@@ -41883,8 +41883,8 @@ var render = function() {
             _c("tr", [
               _c("td", { attrs: { width: "25%" } }, [
                 _c("h4", [
-                  _c("span", { staticClass: "small-text text-muted sizing" }, [
-                    _vm._v("$ " + _vm._s(_vm.activity.price))
+                  _c("span", { staticClass: "small-text  sizing" }, [
+                    _vm._v("Prix: " + _vm._s(_vm.activity.price) + "MAD")
                   ])
                 ])
               ])

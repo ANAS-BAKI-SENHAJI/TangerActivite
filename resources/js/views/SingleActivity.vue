@@ -9,18 +9,18 @@
                             </td>
                             <td width="25%">
                                 <h3 class="title sizing" v-html="activity.name"></h3>
-                                <p class="sizing font-weight-large">Durée d'activite: {{activity.duration_of_activity}}</p>
+                                <p class="sizing ">Durée d'activite: {{activity.duration_of_activity}}</p>
                             </td>  
                         </tr>  
                         <tr>
                             <td width="50%"> 
-                                   <p class="text-muted sizing">{{activity.description}}</p>
+                                   <p class="font-weight-normal sizing">{{activity.description}}</p>
                             </td>
                         </tr>     
                         <tr> 
                              <td width="25%">
                                 <h4>
-                                    <span class="small-text text-muted sizing">$ {{activity.price}}</span>
+                                    <span class="small-text  sizing">Prix: {{activity.price}}MAD</span>
                                 </h4>
                              </td>   
                         </tr>        
