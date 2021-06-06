@@ -14,12 +14,13 @@ class Activity extends Model
         'name',
         'price', 
         'description', 
-        'image', //should contain several images (Idk if it's possible)
+        'duration_of_activity',
         'min_number_of_people',
         'max_number_of_people',
         'included_equipment', //boolean
         'included_transport', //boolean
-        'equipments_included' //will contain many equipments
+        'equipments_included', //will contain many equipments
+        'image' //should contain several images (Idk if it's possible)
     ];
 
     public function reservations(){

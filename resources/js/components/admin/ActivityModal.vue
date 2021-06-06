@@ -7,13 +7,61 @@
                     </div>
                     <div class="modal-body">
                         <slot name="body">
-                            Name: <input type="text" v-model="data.name">
-                            Price: <input type="text" v-model="data.price">
+                            <table>
+                                <tr>
+                                    <td><label> Name: </label></td>
+                                    <td><input type="text" v-model="data.name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Price: </label></td>
+                                    <td><input type="text" v-model="data.price"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Description: </label></td>
+                                    <td><textarea v-model="data.description" placeholder="description"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><label> duration_of_activity: </label></td>
+                                    <td><input type="text" v-model="data.duration_of_activity"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>min_number_of_people: </label></td>
+                                    <td><input type="text" v-model="data.min_number_of_people"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>max_number_of_people: </label></td>
+                                    <td><input type="text" v-model="data.max_number_of_people"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>included_equipment: </label></td>
+                                    <td><input type="text" v-model="data.included_equipment"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>included_transport: </label></td>
+                                    <td><input type="text" v-model="data.included_transport"></td>
+                                </tr>
+                                <tr>
+                                    <td><label> equipments_included: </label></td>
+                                    <td><input type="text" v-model="data.equipments_included"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Image</label></td>
+                                    <td><input type="file" id="file" @change="attachFile"></td>
+                                </tr>
+                            </table>
+                           <!-- <label> Name: </label><input type="text" v-model="data.name">
+                            <label>Price: </label><input type="text" v-model="data.price">
                             <textarea v-model="data.description" placeholder="description"></textarea>
-                            <span >
+                           <label> duration_of_activity: </label><input type="text" v-model="data.duration_of_activity">
+                            <label>min_number_of_people: </label><input type="text" v-model="data.min_number_of_people">
+                            <label>max_number_of_people: </label><input type="text" v-model="data.max_number_of_people">
+                            <label>included_equipment: </label><input type="text" v-model="data.included_equipment">
+                            <label>included_transport: </label><input type="text" v-model="data.included_transport">
+                           <label> equipments_included: </label><input type="text" v-model="data.equipments_included">
+                            <label>Image</label><span >
                                 <img :src="data.image" v-show="data.image != null">
                                 <input type="file" id="file" @change="attachFile">
-                            </span>
+                            </span> -->
                         </slot>
                     </div>
                     <div class="modal-footer">
@@ -45,7 +93,7 @@
         vertical-align: middle;
     }
     .modal-container {
-        width: 300px;
+        width: 550px;
         margin: 0px auto;
         padding: 20px 30px;
         background-color: #fff;
@@ -95,6 +143,12 @@
                     name: "",
                     price: "",
                     description: "",
+                    duration_of_activity:"",
+                    min_number_of_people: "",
+                    max_number_of_people: "",
+                    included_equipment: "",
+                    included_transport: "",
+                    equipments_included: "",
                     image: false
                 }
             }

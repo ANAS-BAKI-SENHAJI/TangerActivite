@@ -1,4 +1,4 @@
- <template>
+<template>
         <div>
             <div class="container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto">
                 <img class="HomeImage" src="/img3.jpg" alt="">
@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-md-12  align-content-center justify-content-center">
                         <div class="row">
-                            <div class="col-md-3 align-content-center justify-content-center flex-wrap " v-for="(activity,index) in activities" :key="index">
+                            <div class="col-md-3 activity-box align-content-center justify-content-center flex-wrap " v-for="(activity,index) in activities" :key="index">
                                 <router-link :to="{ path: '/activities/'+activity.id}">
                                     <img class="image" :src="activity.image" :alt="activity.name">
                                     <h5 v-html="activity.name"></h5>
@@ -20,29 +20,24 @@
                     </div>
                 </div>
             </div>
-
-            
             <div class="container">
                 <div class="row">
                     <div class="col-md-12  align-content-center justify-content-center SavoirPlus">
                         <table>
-                            
-                                <video loop muted autoplay poster="/users.png" class="background-video">
-                                    <source src="/hafa.mp4" type="video/mp4">
-                                </video>
-
-                                <div class="background-video-content">
-                                    <h3 class="spTitre">Experience</h3>
+                            <tr>
+                                <td class="spLeft">
+                                    <h3 class="spTitre">Experiance</h3>
                                     <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
                                     <button class="btn btn-light">En savoir plus</button>
-                                </div>
-                            
+                                </td>
+                                <td class="spRight">
+                                    <img class="spImage" src="img3.jpg" alt="">
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 </div>
             </div>
-
-
             <footer>
             <div class="container-fluid footer d-flex align-content-center justify-content-center flex-wrap ">
                 <table class="FooterTable">
@@ -84,7 +79,6 @@
     .small-text {
         font-size: 14px;
     }
-    
     .hero-section {
         height: 60vh;
         align-items: center;
@@ -113,53 +107,8 @@
         margin-bottom: 2%;
         font-family: cursive;
     }
-
-
-
-
-    .background-video {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
-}
-
-.page-hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.background-video-content {
-    position: relative;
-    z-index: 1;
-}
-
-video[poster] {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.page-hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(22,22,22,0) 100%);
-    z-index: 1;
-}
-
-
-
-
     table{
         border-collapse: collapse;
-        height: 250px;
     }
     a{
         text-decoration: none;
@@ -171,9 +120,20 @@ video[poster] {
         border-radius: 10px;
         margin-top: 2%;
     }
-    
-
-    
+    .spLeft{
+        background: black;
+        color: white;
+        padding: 0 0 30px 20px;
+        width: 50% ;
+    }
+    .spRight{
+        width: 50%;
+        border-radius: 10px 0 0 10px;
+    }
+    .spImage{
+        width: 100%;
+        border-radius: 0 10px 10px 0;
+    }
     td{
         border-radius: 10px 0 0 10px ;
     }
