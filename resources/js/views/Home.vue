@@ -20,7 +20,37 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="container">
+                <div class="row">
+                    <div class="col-md-12  align-content-center justify-content-center SavoirPlus">
+                        <table>
+                            
+                                <video loop muted autoplay poster="/users.png" class="background-video">
+                                    <source src="/SavoirPlusVideo.mp4" type="video/mp4">
+                                </video>
+                            <tr>
+                                <td class="spLeft">
+                                <div class="background-video-content">
+                                    <h3 class="spTitre">Experience</h3>
+                                    <p id="spParag">Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius. Ratione sit illo saepe a ad, fugiat temporibus, totam tempora voluptatibus animi?</p>
+                                    <button class="btn btn-light">En savoir plus</button>
+                                </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-md-12  align-content-center justify-content-center SavoirPlus">
                         <table>
@@ -37,7 +67,12 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+
+
+
+
             <footer>
             <div class="container-fluid footer d-flex align-content-center justify-content-center flex-wrap ">
                 <table class="FooterTable">
@@ -119,27 +154,67 @@
         padding: 0%;
         border-radius: 10px;
         margin-top: 2%;
+        height: 250px;
     }
     .spLeft{
-        background: black;
+        
         color: white;
         padding: 0 0 30px 20px;
-        width: 50% ;
+        width: 30% ;
     }
-    .spRight{
-        width: 50%;
-        border-radius: 10px 0 0 10px;
-    }
-    .spImage{
-        width: 100%;
-        border-radius: 0 10px 10px 0;
-    }
+    
     td{
         border-radius: 10px 0 0 10px ;
     }
     .spTitre{
         padding-bottom: 5%;
+        color: white;
     }
+    #spParag{
+        color: white;
+    }
+
+
+
+
+    .background-video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+    }
+
+    .SavoirPlus {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .background-video-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    video[poster] {
+        object-fit : cover;
+        width:100%;
+        height: 100%;
+    }
+
+    .SavoirPlus:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.711922268907563) 36%, rgba(22,22,22,0) 100%);
+        z-index: 1;
+    }
+
+
+
     .footer{
         margin-top: 2%;
         margin-bottom: 0 ;
