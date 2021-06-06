@@ -82,11 +82,11 @@
             placeReservation(e) {
                 e.preventDefault()
 
-                let reservation_time= this.reservation_time
+                let reservation_time = this.reservation_time
                 let activity_id = this.activity.id
                 let reservation_date = this.reservation_date
 
-                axios.post('api/reservations/', {reservation_time, reservation_date, activity_id})
+                axios.post('/api/reservations/', {activity_id, reservation_date, reservation_time})
                      .then(response => this.$router.push('/confirmation'))
             }
             

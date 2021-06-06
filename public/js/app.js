@@ -2546,10 +2546,10 @@ __webpack_require__.r(__webpack_exports__);
       var reservation_time = this.reservation_time;
       var activity_id = this.activity.id;
       var reservation_date = this.reservation_date;
-      axios.post('api/reservations/', {
-        reservation_time: reservation_time,
+      axios.post('/api/reservations/', {
+        activity_id: activity_id,
         reservation_date: reservation_date,
-        activity_id: activity_id
+        reservation_time: reservation_time
       }).then(function (response) {
         return _this2.$router.push('/confirmation');
       });
@@ -2599,6 +2599,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7857,7 +7862,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-63cd6604] {\n    font-size: 14px;\n}\n.activity-box[data-v-63cd6604] {\n    /* border: 1px solid #cccccc; */\n}\n.hero-section[data-v-63cd6604] {\n    height: 60vh;\n    align-items: center;\n    margin-top: -40px;\n    padding: 0%;\n}\n.title[data-v-63cd6604] {\n    font-size: 60px;\n    color: #ffffff;\n}\n.image[data-v-63cd6604]{\n    width: 250px;\n    border-radius: 10px;\n}\n.hero-section .HomeImage[data-v-63cd6604]{\n    width:100%;\n    height:100%;\n}\n.quote[data-v-63cd6604]{\n    background: black;\n    color: white;\n    margin-top: 0%;\n    padding: 10px;\n    margin-bottom: 2%;\n    font-family: cursive;\n}\ntable[data-v-63cd6604]{\n    border-collapse: collapse;\n}\na[data-v-63cd6604]{\n    text-decoration: none;\n    color:black;\n}\n.SavoirPlus[data-v-63cd6604]{\n    margin: auto;\n    padding: 0%;\n    border-radius: 10px;\n    margin-top: 2%;\n}\n.spLeft[data-v-63cd6604]{\n    background: black;\n    color: white;\n    padding: 0 0 30px 20px;\n    width: 50% ;\n}\n.spRight[data-v-63cd6604]{\n    width: 50%;\n    border-radius: 10px 0 0 10px;\n}\n.spImage[data-v-63cd6604]{\n    width: 100%;\n    border-radius: 0 10px 10px 0;\n}\ntd[data-v-63cd6604]{\n    border-radius: 10px 0 0 10px ;\n}\n.spTitre[data-v-63cd6604]{\n    padding-bottom: 5%;\n}\n.footer[data-v-63cd6604]{\n    margin-top: 2%;\n    margin-bottom: 0 ;\n    background: black;\n    color: white;\n    height: 40px;\n    font-weight: 500;\n}\n.icon[data-v-63cd6604]{\n    width: 50px;\n    padding-right: 20px;\n    margin: auto;\n}\n.FooterTable[data-v-63cd6604]{\n    width: 100%;\n}\n.FooterTd[data-v-63cd6604]{\n    width: 25%;\n}\n.FooterCenter[data-v-63cd6604]{\n    margin: auto;\n    align-content: center;\n    padding-left: 25% ;\n}\n.FooterIcon[data-v-63cd6604]{\n    padding-left: 100px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-63cd6604] {\n        font-size: 14px;\n}\n.hero-section[data-v-63cd6604] {\n        height: 60vh;\n        align-items: center;\n        margin-top: -40px;\n        padding: 0%;\n}\n.title[data-v-63cd6604] {\n        font-size: 60px;\n        color: #ffffff;\n}\n.image[data-v-63cd6604]{\n        width: 250px;\n        border-radius: 10px;\n}\n.hero-section .HomeImage[data-v-63cd6604]{\n        width:100%;\n        height:100%;\n}\n.quote[data-v-63cd6604]{\n        background: black;\n        color: white;\n        margin-top: 0%;\n        padding: 10px;\n        margin-bottom: 2%;\n        font-family: cursive;\n}\n.background-video[data-v-63cd6604] {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    opacity: 0.5;\n}\n.page-hero[data-v-63cd6604] {\n    position: relative;\n    overflow: hidden;\n}\n.background-video-content[data-v-63cd6604] {\n    position: relative;\n    z-index: 1;\n}\nvideo[poster][data-v-63cd6604] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 100%;\n    height: 100%;\n}\n.page-hero[data-v-63cd6604]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgb(0,0,0);\n    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(22,22,22,0) 100%);\n    z-index: 1;\n}\ntable[data-v-63cd6604]{\n        border-collapse: collapse;\n        height: 250px;\n}\na[data-v-63cd6604]{\n        text-decoration: none;\n        color:black;\n}\n.SavoirPlus[data-v-63cd6604]{\n        margin: auto;\n        padding: 0%;\n        border-radius: 10px;\n        margin-top: 2%;\n}\ntd[data-v-63cd6604]{\n        border-radius: 10px 0 0 10px ;\n}\n.spTitre[data-v-63cd6604]{\n        padding-bottom: 5%;\n}\n.footer[data-v-63cd6604]{\n        margin-top: 2%;\n        margin-bottom: 0 ;\n        background: black;\n        color: white;\n        height: 40px;\n        font-weight: 500;\n}\n.icon[data-v-63cd6604]{\n        width: 50px;\n        padding-right: 20px;\n        margin: auto;\n}\n.FooterTable[data-v-63cd6604]{\n        width: 100%;\n}\n.FooterTd[data-v-63cd6604]{\n        width: 25%;\n}\n.FooterCenter[data-v-63cd6604]{\n        margin: auto;\n        align-content: center;\n        padding-left: 25% ;\n}\n.FooterIcon[data-v-63cd6604]{\n        padding-left: 100px;\n}\n    ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40504,7 +40509,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Finish")]
+                    [_vm._v("Finished")]
                   )
                 ])
               : _vm._e()
@@ -41148,7 +41153,7 @@ var render = function() {
                   {
                     key: index,
                     staticClass:
-                      "col-md-3 activity-box align-content-center justify-content-center flex-wrap "
+                      "col-md-3 align-content-center justify-content-center flex-wrap "
                   },
                   [
                     _c(
@@ -41176,7 +41181,41 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(2),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-md-12  align-content-center justify-content-center SavoirPlus"
+          },
+          [
+            _c("table", [
+              _c(
+                "video",
+                {
+                  staticClass: "background-video",
+                  attrs: {
+                    loop: "",
+                    muted: "",
+                    autoplay: "",
+                    poster: "/users.png"
+                  },
+                  domProps: { muted: true }
+                },
+                [
+                  _c("source", {
+                    attrs: { src: "/hafa.mp4", type: "video/mp4" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ]
+        )
+      ])
+    ]),
     _vm._v(" "),
     _vm._m(3)
   ])
@@ -41217,42 +41256,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-md-12  align-content-center justify-content-center SavoirPlus"
-          },
-          [
-            _c("table", [
-              _c("tr", [
-                _c("td", { staticClass: "spLeft" }, [
-                  _c("h3", { staticClass: "spTitre" }, [_vm._v("Experiance")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("button", { staticClass: "btn btn-light" }, [
-                    _vm._v("En savoir plus")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "spRight" }, [
-                  _c("img", {
-                    staticClass: "spImage",
-                    attrs: { src: "img3.jpg", alt: "" }
-                  })
-                ])
-              ])
-            ])
-          ]
+    return _c("div", { staticClass: "background-video-content" }, [
+      _c("h3", { staticClass: "spTitre" }, [_vm._v("Experience")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
         )
-      ])
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "btn btn-light" }, [_vm._v("En savoir plus")])
     ])
   },
   function() {

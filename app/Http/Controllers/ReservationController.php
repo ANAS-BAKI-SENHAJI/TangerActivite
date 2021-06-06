@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Reservation;
+use App\Models\Reservation;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -12,6 +12,8 @@ class ReservationController extends Controller
     {
         return response()->json(Reservation::with(['activity'])->get(),200);
     }
+
+
     public function deliverReservation(Reservation $reservation)
     {
         $reservation->is_delivered = true;
@@ -20,10 +22,11 @@ class ReservationController extends Controller
         return response()->json([
             'status'    => $status,
             'data'      => $reservation,
-            'message'   => $status ? 'Reservation Delivered!' : 'Error Delivering Reservation'
+            'message'   => $status ? 'Reservation Finished!' : 'Error Finishing Reservation'
         ]);
     }
 
+    
     public function store(Request $request)
     {
         $reservation = Reservation::create([

@@ -20,7 +20,7 @@
                         <td>{{reservation.activity.price}}</td>
                         <td>{{reservation.reservation_time}}</td>
                         <td>{{reservation.is_delivered == 1? "Yes" : "No"}}</td>
-                        <td v-if="reservation.is_delivered == 0"><button class="btn btn-success" @click="deliver(index)">Finish</button></td>
+                        <td v-if="reservation.is_delivered == 0"><button class="btn btn-success" @click="deliver(index)">Finished</button></td>
                     </tr>
                 </tbody>
             </table>
