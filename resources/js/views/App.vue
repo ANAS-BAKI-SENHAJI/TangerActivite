@@ -76,4 +76,7 @@
     .navbar-toggler-icon{
         color: white;
     }
+    .navbar-brand:hover{
+        color: white;
+    }
     </style>

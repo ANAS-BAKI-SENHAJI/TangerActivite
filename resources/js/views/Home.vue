@@ -79,9 +79,6 @@
     .small-text {
         font-size: 14px;
     }
-    .activity-box {
-        /* border: 1px solid #cccccc; */
-    }
     .hero-section {
         height: 60vh;
         align-items: center;
