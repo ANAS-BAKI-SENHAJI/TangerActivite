@@ -5,7 +5,7 @@
                     <table>
                         <tr>
                             <td rowspan="3" width="50%">
-                                <img class="image" :src="'/' + activity.image" :alt="activity.name">
+                                <img class="image" :src="activity.image" :alt="activity.name">
                             </td>
                             <td width="25%">
                                 <h3 class="title sizing" v-html="activity.name"></h3>

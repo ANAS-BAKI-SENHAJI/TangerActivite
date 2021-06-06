@@ -2599,6 +2599,56 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['pid'],
   data: function data() {
@@ -3109,6 +3159,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -7936,7 +7987,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-bb718336] { font-size: 18px;\n}\n.reservation-box[data-v-bb718336] { border: 1px solid #cccccc; padding: 10px 15px;\n}\n.title[data-v-bb718336] { font-size: 36px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-bb718336] { \n    font-size: 18px;\n}\n.title[data-v-bb718336] { \n    font-size: 36px;\n}\n.image[data-v-bb718336]{ \n    width:100%;\n    border-radius: 3px;\n}\n.sizing[data-v-bb718336]{\n    font-size: 16px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8032,7 +8083,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-2f42e64c] { font-size: 14px;\n}\n.activity-box[data-v-2f42e64c] { border: 1px solid #cccccc; padding: 10px 15px;\n}\n.hero-section[data-v-2f42e64c] { background: #ababab; height: 20vh; align-items: center; margin-bottom: 20px; margin-top: -20px;\n}\n.title[data-v-2f42e64c] { font-size: 60px; color: #ffffff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-2f42e64c] { font-size: 14px;\n}\n.activity-box[data-v-2f42e64c] { border: 1px solid #cccccc;\n}\n.hero-section[data-v-2f42e64c] { background: #ababab; height: 20vh; align-items: center; margin-bottom: 20px; margin-top: -20px;\n}\n.title[data-v-2f42e64c] { font-size: 60px; color: #ffffff;\n}\n.image[data-v-2f42e64c]{ width: 300px;}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41320,24 +41371,132 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-8 offset-md-2" }, [
-        _c("div", { staticClass: "reservation-box" }, [
-          _c("img", {
-            attrs: { src: _vm.activity.image, alt: _vm.activity.name }
-          }),
-          _vm._v(" "),
-          _c("h2", {
-            staticClass: "title",
-            domProps: { innerHTML: _vm._s(_vm.activity.name) }
-          }),
-          _vm._v(" "),
-          _c("p", { staticClass: "small-text text-muted float-left" }, [
-            _vm._v("$ " + _vm._s(_vm.activity.price))
+        _c("table", [
+          _c("tr", [
+            _c("td", { attrs: { rowspan: "3", width: "50%" } }, [
+              _c("img", {
+                staticClass: "image",
+                attrs: { src: _vm.activity.image, alt: _vm.activity.name }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", { attrs: { width: "25%" } }, [
+              _c("h2", {
+                staticClass: "title pl-2",
+                domProps: { innerHTML: _vm._s(_vm.activity.name) }
+              })
+            ])
           ]),
           _vm._v(" "),
-          _c("br"),
+          _c("tr", [
+            _c("td", { attrs: { width: "50%" } }, [
+              _vm.isLoggedIn
+                ? _c("div", [
+                    _c("div", { staticClass: "row pl-2" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-4 float-left sizing" },
+                        [_vm._v("Reservation Date: ")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.reservation_date,
+                            expression: "reservation_date"
+                          }
+                        ],
+                        staticClass: "col-md-4 pl-2",
+                        attrs: { type: "date", name: "reservation_date" },
+                        domProps: { value: _vm.reservation_date },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.reservation_date = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row pl-2" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "col-md-4 float-left pr-2 sizing",
+                          attrs: { for: "reservation_time" }
+                        },
+                        [_vm._v("Reservation Time:")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-4" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.reservation_time,
+                              expression: "reservation_time"
+                            }
+                          ],
+                          staticClass: "form-control pl-2",
+                          attrs: {
+                            id: "reservation_time",
+                            type: "time",
+                            required: ""
+                          },
+                          domProps: { value: _vm.reservation_time },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.reservation_time = $event.target.value
+                            }
+                          }
+                        })
+                      ])
+                    ])
+                  ])
+                : _vm._e()
+            ])
+          ]),
           _vm._v(" "),
-          _c("hr")
+          _c("tr", [
+            _c("td", { attrs: { width: "25%" } }, [
+              _c("p", { staticClass: "small-text  pl-2" }, [
+                _vm._v("Prix: " + _vm._s(_vm.activity.price) + "MAD")
+              ])
+            ])
+          ])
         ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _vm.isLoggedIn
+          ? _c("div", [
+              _vm.isLoggedIn
+                ? _c(
+                    "button",
+                    {
+                      staticClass:
+                        "col-md-4 btn btn-sm btn-success float-right",
+                      on: { click: _vm.placeReservation }
+                    },
+                    [_vm._v("Continue")]
+                  )
+                : _vm._e()
+            ])
+          : _vm._e(),
         _vm._v(" "),
         _c("br"),
         _vm._v(" "),
@@ -41363,91 +41522,6 @@ var render = function() {
                   },
                   [_vm._v("Create an account")]
                 )
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.isLoggedIn
-            ? _c("div", [
-                _c("label", { staticClass: "row" }, [
-                  _c("span", { staticClass: "col-md-2 float-left" }, [
-                    _vm._v("Reservation Date: ")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.reservation_date,
-                        expression: "reservation_date"
-                      }
-                    ],
-                    staticClass: "col-md-2 float-left",
-                    attrs: { type: "date", name: "reservation_date" },
-                    domProps: { value: _vm.reservation_date },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.reservation_date = $event.target.value
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-md-3 col-form-label",
-                      attrs: { for: "reservation_time" }
-                    },
-                    [_vm._v("Reservation Time:")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-9" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.reservation_time,
-                          expression: "reservation_time"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        id: "reservation_time",
-                        type: "time",
-                        required: ""
-                      },
-                      domProps: { value: _vm.reservation_time },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.reservation_time = $event.target.value
-                        }
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _vm.isLoggedIn
-                  ? _c(
-                      "button",
-                      {
-                        staticClass:
-                          "col-md-4 btn btn-sm btn-success float-right",
-                        on: { click: _vm.placeReservation }
-                      },
-                      [_vm._v("Continue")]
-                    )
-                  : _vm._e()
               ])
             : _vm._e()
         ])
@@ -42267,10 +42341,7 @@ var render = function() {
               _c("td", { attrs: { rowspan: "3", width: "50%" } }, [
                 _c("img", {
                   staticClass: "image",
-                  attrs: {
-                    src: "/" + _vm.activity.image,
-                    alt: _vm.activity.name
-                  }
+                  attrs: { src: _vm.activity.image, alt: _vm.activity.name }
                 })
               ]),
               _vm._v(" "),
@@ -42449,6 +42520,7 @@ var render = function() {
                 { key: index, staticClass: "col-md-4 activity-box" },
                 [
                   _c("img", {
+                    staticClass: "col-md-12 pt-1",
                     attrs: {
                       src: reservation.activity.image,
                       alt: reservation.activity.name
