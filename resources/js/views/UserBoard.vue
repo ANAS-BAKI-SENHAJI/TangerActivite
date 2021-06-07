@@ -8,10 +8,10 @@
                     <div class="col-md-12">
                         <br>
                         <div class="row">
-                            <div class="col-md-4 activity-box" v-for="(reservation,index) in reservations" :key="index">
+                            <div class="col-md-4 activity-box mt-3" v-for="(reservation,index) in reservations" :key="index">
                                 <img :src="reservation.activity.image" :alt="reservation.activity.name" class="col-md-12 pt-1">
                                 <h5><span v-html="reservation.activity.name"></span><br>
-                                    <span class="small-text text-muted">$ {{reservation.activity.price}}</span>
+                                    <span class="small-text text-muted">{{reservation.activity.price}} MAD</span>
                                 </h5>
                                 <hr>
                                 <span class="small-text text-muted">Reservation Date: {{reservation.reservation_date}}
