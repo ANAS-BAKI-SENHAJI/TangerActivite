@@ -35,7 +35,7 @@
                                 <td class="spLeft">
                                 <div class="background-video-content">
                                     <h3 class="spTitre">Experience</h3>
-                                    <p id="spParag">Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius. Ratione sit illo saepe a ad, fugiat temporibus, totam tempora voluptatibus animi?</p>
+                                    <p id="spParag">Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius.</p>
                                     <button class="btn btn-light">En savoir plus</button>
                                 </div>
                                 </td>
@@ -194,6 +194,7 @@
     .background-video-content {
         position: relative;
         z-index: 1;
+        padding: 30px 0 20px 0;
     }
 
     video[poster] {
