@@ -41728,7 +41728,7 @@ var render = function() {
                 },
                 [
                   _c("source", {
-                    attrs: { src: "/SavoirPlusVideo.mp4", type: "video/mp4" }
+                    attrs: { src: "/SavoirPlusVid.mp4", type: "video/mp4" }
                   })
                 ]
               ),

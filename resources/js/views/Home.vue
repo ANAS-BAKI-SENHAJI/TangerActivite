@@ -29,7 +29,7 @@
                         <table>
                             
                                 <video loop muted autoplay poster="/users.png" class="background-video">
-                                    <source src="/SavoirPlusVideo.mp4" type="video/mp4">
+                                    <source src="/SavoirPlusVid.mp4" type="video/mp4">
                                 </video>
                             <tr>
                                 <td class="spLeft">
