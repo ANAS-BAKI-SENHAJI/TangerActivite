@@ -28,7 +28,7 @@
                     <div class="col-md-12  align-content-center justify-content-center SavoirPlus">
                         <table>
                             
-                                <video loop muted autoplay poster="/users.png" class="background-video">
+                                <video loop muted autoplay poster="/SavoirPlusPhoto.jpg" class="background-video">
                                     <source src="/SavoirPlusVid.mp4" type="video/mp4">
                                 </video>
                             <tr>
