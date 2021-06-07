@@ -9,7 +9,7 @@
                         <br>
                         <div class="row">
                             <div class="col-md-4 activity-box" v-for="(reservation,index) in reservations" :key="index">
-                                <img :src="reservation.activity.image" :alt="reservation.activity.name">
+                                <img :src="reservation.activity.image" :alt="reservation.activity.name" class="col-md-12 pt-1">
                                 <h5><span v-html="reservation.activity.name"></span><br>
                                     <span class="small-text text-muted">$ {{reservation.activity.price}}</span>
                                 </h5>
@@ -29,9 +29,10 @@
 
     <style scoped>
     .small-text { font-size: 14px; }
-    .activity-box { border: 1px solid #cccccc; padding: 10px 15px; }
+    .activity-box { border: 1px solid #cccccc;  }
     .hero-section { background: #ababab; height: 20vh; align-items: center; margin-bottom: 20px; margin-top: -20px; }
     .title { font-size: 60px; color: #ffffff; }
+    .image{ width: 300px;}
     </style>
 
       <script>
