@@ -18,6 +18,7 @@ class CreateReservationsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
     }
 
     public function down()

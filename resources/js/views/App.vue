@@ -2,7 +2,7 @@
         <div>
             <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
                 <div class="container">
-                    <router-link :to="{name: 'home'}" class="navbar-brand">Big Store</router-link>
+                    <router-link :to="{name: 'home'}" class="navbar-brand"><img src="logoTest2.png"></router-link>
                     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon "></span>
                     </button>
@@ -63,12 +63,15 @@
     <style scoped>
     .navbar{
         background: black;
+        padding: 0 !important;
     }
     .navbar-light .navbar-nav .nav-link{
         color: white;
     }
     .navbar-brand{
         color: white;
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
     }
     .py-4{
         padding-bottom: 0 !important ;

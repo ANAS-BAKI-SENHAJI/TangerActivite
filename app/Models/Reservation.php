@@ -12,11 +12,13 @@
             'activity_id', 'user_id', 'reservation_date', 'reservation_time' 
         ];
 
-        public function user()
-        {
+        // public function user()
+        // {
+        //     return $this->belongsTo(User::class, 'user_id');
+        // }
+        public function user(){
             return $this->belongsTo(User::class, 'user_id');
         }
-
         public function activity()
         {
             return $this->belongsTo(Activity::class, 'activity_id');

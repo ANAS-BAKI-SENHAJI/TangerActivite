@@ -4,6 +4,7 @@
                 <thead>
                     <tr>
                         <td></td>
+                        <td>User ID</td>
                         <td>Activity</td>
                         <td>Reservation_date</td>
                         <td>Prix</td>
@@ -15,7 +16,8 @@
                 <tbody>
                     <tr v-for="(reservation,index) in reservations" :key="index">
                         <td>{{index+1}}</td>
-                        <td v-html="reservation.activity.name"></td>
+                        <td>{{reservation.user_id}}</td>
+                        <td>{{reservation.activity.name}} </td>
                         <td>{{reservation.reservation_date}}</td>
                         <td>{{reservation.activity.price}}</td>
                         <td>{{reservation.reservation_time}}</td>
@@ -31,7 +33,8 @@
     export default {
         data() {
             return {
-                reservations : []
+                reservations : [],
+
             }
         },
         beforeMount(){

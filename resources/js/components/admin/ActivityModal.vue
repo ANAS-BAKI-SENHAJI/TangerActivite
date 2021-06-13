@@ -46,7 +46,7 @@
                                 </tr>
                                 <tr>
                                     <td><label>Image</label></td>
-                                    <td><input type="file" id="file" @change="attachFile"></td>
+                                    <td><input type="file" id="file" @change="attachFile" multiple></td>
                                 </tr>
                             </table>
                            <!-- <label> Name: </label><input type="text" v-model="data.name">

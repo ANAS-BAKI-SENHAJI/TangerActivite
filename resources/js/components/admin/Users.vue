@@ -3,10 +3,11 @@
             <table class="table table-responsive table-striped">
                 <thead>
                     <tr>
-                        <td></td>
+                        <td>User ID</td>
                         <td>Name</td>
+                        <td>Numero Tel</td>
                         <td>Email</td>
-                        <td>Joined</td>
+                        <td>joindre</td>
                         <td>Total Reservations</td>
                     </tr>
                 </thead>
@@ -14,6 +15,7 @@
                     <tr v-for="(user,index) in users" :key="index">
                         <td>{{index+1}}</td>
                         <td>{{user.name}}</td>
+                        <td>{{user.phone}}</td>
                         <td>{{user.email}}</td>
                         <td>{{user.created_at}}</td>
                         <td>{{user.reservations.length}}</td>
