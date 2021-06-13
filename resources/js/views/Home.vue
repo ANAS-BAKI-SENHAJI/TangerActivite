@@ -148,11 +148,13 @@
         export default {
             data(){
                 return {
-                    activities : []
+                    activities : [],
+                    isLoggedIn : null
                 }
             },
             mounted(){
-                axios.get("api/activities/").then(response => this.activities = response.data)      
+                axios.get("api/activities/").then(response => this.activities = response.data) ,
+                this.isLoggedIn = localStorage.getItem('bigStore.jwt') != null     
             }
         }
     </script>
