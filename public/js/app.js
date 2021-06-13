@@ -41792,7 +41792,7 @@ var render = function() {
                     loop: "",
                     muted: "",
                     autoplay: "",
-                    poster: "/users.png"
+                    poster: "/SavoirPlusPhoto.jpg"
                   },
                   domProps: { muted: true }
                 },
