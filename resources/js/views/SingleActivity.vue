@@ -44,7 +44,7 @@
                     <h5>les équipment inclus</h5>
                     <p class="small-text text-muted float-left">{{activity.equipments_included}}</p>
                     <br>
-                    <router-link :to="{ path: '/checkout?pid='+activity.id }" class="col-md-4 btn btn-sm btn-primary float-right">Reserver</router-link>
+                    <router-link :to="{ path: '/checkout?pid='+activity.id }" class="col-md-4 btn btn-sm btn-primary float-right reserver">Reserver</router-link>
                 </div>
             </div>
         </div>
@@ -87,5 +87,10 @@
     .sIcon{
         width: 30px;
         float: left;
+    }
+    .reserver{
+        background-color: #2193b0;
+        border: none;
+        font-weight: bold;
     }
     </style>

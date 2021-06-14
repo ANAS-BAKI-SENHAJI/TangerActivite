@@ -39,7 +39,7 @@
                     <br>
                     <hr>
                     <div v-if="isLoggedIn">
-                        <button class="col-md-4 btn btn-sm btn-success float-right" v-if="isLoggedIn" @click="placeReservation">Continue</button>
+                        <button class="col-md-4 btn btn-sm btn-success float-right continu" v-if="isLoggedIn" @click="placeReservation">Continue</button>
                     </div>
                     <!-- <div class="reservation-box">
                         <img :src="activity.image" :alt="activity.name">
@@ -94,6 +94,11 @@
     }
     .sizing{
         font-size: 16px;
+    }
+    .continu{
+        background-color: #2193b0;
+        border: none;
+        font-weight: bold;
     }
     </style>
 

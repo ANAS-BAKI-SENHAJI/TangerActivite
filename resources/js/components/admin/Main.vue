@@ -1,15 +1,11 @@
   <template>
         <div class="row">
-            <div class="col-md-4 activity-box d-flex align-content-center justify-content-center flex-wrap big-text">
-                <a href='/admin/reservations'>Reservations ({{reservations.length}})</a>
+            <div class="col-md-8 activity-box d-flex align-content-center justify-content-center flex-wrap big-text">
+                <a href='/admin/reservations' class="color">Reservations ({{reservations.length}})</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='/admin/activities' class="color">Activities ({{activities.length}})</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='/admin/users' class="color">Users ({{users.length}})</a>
             </div>
-            <hr>
-            <div class="col-md-4 activity-box d-flex align-content-center justify-content-center flex-wrap big-text">
-                <a href='/admin/activities'>Activities ({{activities.length}})</a>
-            </div>
-            <div class="col-md-4 activity-box d-flex align-content-center justify-content-center flex-wrap big-text">
-                <a href='/admin/users'>Users ({{users.length}})</a>
-            </div>
+
         </div>
     </template>
 
@@ -33,5 +29,15 @@
 
     <style scoped>
     .big-text { font-size: 28px; }
-    .activity-box { border: 1px solid #cccccc; padding: 10px 15px; height: 20vh }
+    .activity-box { 
+        padding: 10px 15px; 
+        height: 20vh 
+    }
+    .color{
+        color: #2193b0;;
+    }
+    a{
+        display:inline-block;
+        text-decoration: none;    
+    }
     </style>
