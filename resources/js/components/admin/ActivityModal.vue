@@ -9,11 +9,11 @@
                         <slot name="body">
                             <table>
                                 <tr>
-                                    <td><label> Name: </label></td>
+                                    <td><label> Nom: </label></td>
                                     <td><input type="text" v-model="data.name"></td>
                                 </tr>
                                 <tr>
-                                    <td><label>Price: </label></td>
+                                    <td><label>Prix: </label></td>
                                     <td><input type="text" v-model="data.price"></td>
                                 </tr>
                                 <tr>
@@ -21,27 +21,27 @@
                                     <td><textarea v-model="data.description" placeholder="description"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><label> duration_of_activity: </label></td>
+                                    <td><label>Durée d'activité : </label></td>
                                     <td><input type="text" v-model="data.duration_of_activity"></td>
                                 </tr>
                                 <tr>
-                                    <td><label>min_number_of_people: </label></td>
+                                    <td><label>Nombre minimale des personnes : </label></td>
                                     <td><input type="text" v-model="data.min_number_of_people"></td>
                                 </tr>
                                 <tr>
-                                    <td><label>max_number_of_people: </label></td>
+                                    <td><label>Nombre maximale des personnes : </label></td>
                                     <td><input type="text" v-model="data.max_number_of_people"></td>
                                 </tr>
                                 <tr>
-                                    <td><label>included_equipment: </label></td>
+                                    <td><label>Equipement inclus : </label></td>
                                     <td><input type="text" v-model="data.included_equipment"></td>
                                 </tr>
                                 <tr>
-                                    <td><label>included_transport: </label></td>
+                                    <td><label>Transport inclus : </label></td>
                                     <td><input type="text" v-model="data.included_transport"></td>
                                 </tr>
                                 <tr>
-                                    <td><label> equipments_included: </label></td>
+                                    <td><label> Les équipements inclus : </label></td>
                                     <td><input type="text" v-model="data.equipments_included"></td>
                                 </tr>
                                 <tr>
@@ -67,7 +67,7 @@
                     <div class="modal-footer">
                         <slot name="footer">
                             <button class="modal-default-button" @click="uploadFile">
-                                Finish
+                                Sauvegarder
                             </button>
                         </slot>
                     </div>

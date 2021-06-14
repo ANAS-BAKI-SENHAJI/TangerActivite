@@ -4,12 +4,12 @@
                 <thead>
                     <tr>
                         <td></td>
-                        <td>User ID</td>
-                        <td>Activity</td>
-                        <td>Reservation_date</td>
+                        <td>Utilisateur ID</td>
+                        <td>Activité</td>
+                        <td>Date de Réservation</td>
                         <td>Prix</td>
-                        <td>Reservation_time</td>
-                        <td>is Finished?</td>
+                        <td>Heure de réservation</td>
+                        <td>C'est terminée?</td>
                         <td>Action</td>
                     </tr>
                 </thead>
@@ -22,7 +22,7 @@
                         <td>{{reservation.activity.price}}</td>
                         <td>{{reservation.reservation_time}}</td>
                         <td>{{reservation.is_delivered == 1? "Yes" : "No"}}</td>
-                        <td v-if="reservation.is_delivered == 0"><button class="btn btn-success" @click="deliver(index)">Finished</button></td>
+                        <td v-if="reservation.is_delivered == 0"><button class="btn btn-success" @click="deliver(index)">Terminée</button></td>
                     </tr>
                 </tbody>
             </table>

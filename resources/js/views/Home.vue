@@ -4,7 +4,7 @@
                 <img class="HomeImage" src="/img3.jpg" alt="">
             </div>
             <div class="quote container-fluid d-flex align-content-center justify-content-center flex-wrap ml-auto">
-                <h2>Feel Free To Discover</h2>
+                <h2>N'hésitez pas à découvrir</h2>
             </div>
             <div class="container">
                 <div class="row">
@@ -36,7 +36,7 @@
                             <tr>
                                 <td class="spLeft">
                                 <div class="background-video-content">
-                                    <h3 class="spTitre">Experience</h3>
+                                    <h3 class="spTitre">Experiences</h3>
                                     <p id="spParag">Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius.</p>
                                     <button class="btn">En savoir plus</button>
                                 </div>
@@ -83,7 +83,7 @@
 <div class="col-xs-12 col-sm-6 col-md-3">
 <div class="widget subscribe no-box">
 <h5 class="widget-title">Tanger Activite<span></span></h5>
-<p>About the company, little discription will goes here.. </p>
+<p>Agence d'activités de divertissement à Tanger.</p>
 </div>
 </div>
 
@@ -106,9 +106,9 @@
 
 <div class="col-xs-12 col-sm-6 col-md-3">
 <div class="widget no-box">
-<h5 class="widget-title">Register<span></span></h5>
+<h5 class="widget-title">Inscription<span></span></h5>
 <p>Accédez à nos activités</p>
-<router-link :to="{ name: 'register' }" class="btn" v-if="!isLoggedIn">Register</router-link>
+<router-link :to="{ name: 'register' }" class="btn" v-if="!isLoggedIn">Connexion</router-link>
 </div>
 </div>
 
@@ -154,7 +154,7 @@
             },
             mounted(){
                 axios.get("api/activities/").then(response => this.activities = response.data) ,
-                this.isLoggedIn = localStorage.getItem('bigStore.jwt') != null     
+                this.isLoggedIn = localStorage.getItem('activityStore.jwt') != null     
             }
         }
     </script>

@@ -52,10 +52,10 @@
             }
         },
         beforeMount() {
-            this.user = JSON.parse(localStorage.getItem('bigStore.user'))
+            this.user = JSON.parse(localStorage.getItem('activityStore.user'))
 
             axios.defaults.headers.common['Content-Type'] = 'application/json'
-            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt')
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('activityStore.jwt')
 
             axios.get(`api/users/${this.user.id}/reservations`)
                  .then(response => this.reservations = response.data)

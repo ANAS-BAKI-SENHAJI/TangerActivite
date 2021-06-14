@@ -87,13 +87,13 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
-        if (localStorage.getItem('bigStore.jwt') == null) {
+        if (localStorage.getItem('activityStore.jwt') == null) {
             next({
                 path: '/login',
                 params: { nextUrl: to.fullPath }
             })
         } else {
-            let user = JSON.parse(localStorage.getItem('bigStore.user'))
+            let user = JSON.parse(localStorage.getItem('activityStore.user'))
             if (to.matched.some(record => record.meta.is_admin)) {
                 if (user.is_admin == 1) {
                     next()

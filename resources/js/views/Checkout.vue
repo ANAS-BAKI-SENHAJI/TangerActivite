@@ -16,13 +16,13 @@
                                 <div v-if="isLoggedIn">
 
                                     <div class="row pl-2">
-                                        <label class="col-md-4 float-left sizing">Reservation Date: </label>
+                                        <label class="col-md-4 float-left sizing">Date de Réservation: </label>
                                         <input type="date" name="reservation_date" class="col-md-4 pl-2" v-model="reservation_date" >
                                     </div>
                                     <br>
                                     <br>
                                     <div class="row pl-2">
-                                            <label for="reservation_time" class="col-md-4 float-left pr-2 sizing">Reservation Time:</label>
+                                            <label for="reservation_time" class="col-md-4 float-left pr-2 sizing">Heure de Réservation:</label>
                                             <div class="col-md-4">
                                                 <input id="reservation_time" type="time" class="form-control pl-2" v-model="reservation_time" required>
                                             </div>
@@ -39,7 +39,7 @@
                     <br>
                     <hr>
                     <div v-if="isLoggedIn">
-                        <button class="col-md-4 btn btn-sm btn-success float-right continu" v-if="isLoggedIn" @click="placeReservation">Continue</button>
+                        <button class="col-md-4 btn btn-sm btn-success float-right continu" v-if="isLoggedIn" @click="placeReservation">Continuer</button>
                     </div>
                     <!-- <div class="reservation-box">
                         <img :src="activity.image" :alt="activity.name">
@@ -54,8 +54,8 @@
                     <div>
                         <div v-if="!isLoggedIn">
                             <h2>You need to login to continue</h2>
-                            <button class="col-md-4 btn btn-primary float-left" @click="login">Login</button>
-                            <button class="col-md-4 btn btn-danger float-right" @click="register">Create an account</button>
+                            <button class="col-md-4 btn btn-primary float-left" @click="login">Connexion</button>
+                            <button class="col-md-4 btn btn-danger float-right" @click="register">Inscription</button>
                         </div>
                         <!-- <div v-if="isLoggedIn">
 
@@ -116,15 +116,15 @@
             }
         },
         mounted() {
-            this.isLoggedIn = localStorage.getItem('bigStore.jwt') != null
+            this.isLoggedIn = localStorage.getItem('activityStore.jwt') != null
         },
         beforeMount() {
             axios.get(`/api/activities/${this.pid}`).then(response => this.activity = response.data)
 
-            if (localStorage.getItem('bigStore.jwt') != null) {
-                this.user = JSON.parse(localStorage.getItem('bigStore.user'))
+            if (localStorage.getItem('activityStore.jwt') != null) {
+                this.user = JSON.parse(localStorage.getItem('activityStore.user'))
                 axios.defaults.headers.common['Content-Type'] = 'application/json'
-                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt')
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('activityStore.jwt')
             }
         },
         methods : {

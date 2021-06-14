@@ -53,7 +53,7 @@ class ActivityController extends Controller
         return response()->json([
             'status' => (bool) $activity,
             'data'   => $activity,
-            'message' => $activity ? 'Activity Created!' : 'Error Creating Activity'
+            'message' => $activity ? 'Activité créé avec succés' : 'un problème est survenu lors de la création!'
         ]);
     }
 
@@ -100,7 +100,7 @@ class ActivityController extends Controller
 
         return response()->json([
             'status' => $status,
-            'message' => $status ? 'Activity Updated!' : 'Error Updating Activity'
+            'message' => $status ? 'Activité est mise à jour' : 'Erreur lors de la mise à jour'
         ]);
     }
 
@@ -116,7 +116,7 @@ class ActivityController extends Controller
 
         return response()->json([
             'status' => $status,
-            'message' => $status ? 'Activity Deleted!' : 'Error Deleting Activity'
+            'message' => $status ? 'Activité supprimée!' : 'Erreur lors de la suppression'
         ]);
     }
 }

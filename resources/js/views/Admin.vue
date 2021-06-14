@@ -1,16 +1,16 @@
  <template>
         <div>
             <div class="container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto">
-                <h2 class="title">Admin Dashboard</h2>
+                <h2 class="title">Tableau de bord administrateur</h2>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <ul style="list-style-type:none">
-                            <li class="active"><button class="col btn btn-cool-blues btn-rounded " @click="setComponent('main')">Dashboard</button></li>
-                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('reservations')">Reservations</button></li>
-                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('activities')">Activities</button></li>
-                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('users')">Users</button></li>
+                            <li class="active"><button class="col btn btn-cool-blues btn-rounded " @click="setComponent('main')">Tableau de bord</button></li>
+                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('reservations')">Réservations</button></li>
+                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('activities')">Activités</button></li>
+                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('users')">Utilisateurs</button></li>
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -39,9 +39,9 @@
         },
         beforeMount() {
             this.setComponent(this.$route.params.page)
-            this.user = JSON.parse(localStorage.getItem('bigStore.  d fuser'))
+            this.user = JSON.parse(localStorage.getItem('activityStore.  d fuser'))
             axios.defaults.headers.common['Content-Type'] = 'application/json'
-            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt')
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('activityStore.jwt')
         },
         methods: {
             setComponent(value) {

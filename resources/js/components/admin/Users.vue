@@ -3,12 +3,12 @@
             <table class="table table-responsive table-striped">
                 <thead>
                     <tr>
-                        <td>User ID</td>
-                        <td>Name</td>
-                        <td>Numero Tel</td>
+                        <td>Utilisateur ID</td>
+                        <td>Nom</td>
+                        <td>Numéro Tel</td>
                         <td>Email</td>
-                        <td>joindre</td>
-                        <td>Total Reservations</td>
+                        <td>Rejoint à</td>
+                        <td>Totale des réservations</td>
                     </tr>
                 </thead>
                 <tbody>

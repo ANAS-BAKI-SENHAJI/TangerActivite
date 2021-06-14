@@ -4,16 +4,16 @@
                 <thead>
                     <tr>
                         <td></td>
-                        <td>activity</td>
-                        <td>Price</td>
+                        <td>Activité</td>
+                        <td>Prix</td>
                         <td>Description</td>
-                        <td>duration_of_activity</td>
-                        <td>min_number_of_people</td>
-                        <td>max_number_of_people</td>
-                        <td>included_equipment</td>
-                        <td>included_transport</td>
-                        <td>equipments_included</td>
-                        <td>image</td>
+                        <td>Durée d'activité</td>
+                        <td>Nombre min des personnes</td>
+                        <td>Nombre max des personnes</td>
+                        <td>Equipement inclus</td>
+                        <td>Transport inclus</td>
+                        <td>Les équipements inclus</td>
+                        <td>Image</td>
                         <td>Action</td>
                     </tr>
                 </thead>
@@ -31,7 +31,7 @@
                         <td >{{activity.equipments_included}}</td>
                         <td >{{activity.image}}</td>
                         <td>
-                            <button class="btn btn-danger btn-xs" @click="removeActivity(activity.id, index)">Delete</button>
+                            <button class="btn btn-danger btn-xs" @click="removeActivity(activity.id, index)">Supprimer</button>
                         </td>
                     </tr>
                 </tbody>
@@ -39,7 +39,7 @@
             <modal @close="endEditing" :activity="editingItem" v-show="editingItem != null"></modal>
             <modal @close="addActivity"  :activity="addingActivity" v-show="addingActivity != null"></modal>
             <br>
-            <button class="btn btn-primary" @click="newActivity">Add New activity</button>
+            <button class="btn btn-primary" @click="newActivity">Ajouter Activité</button>
         </div>
     </template>
     <style scoped>
