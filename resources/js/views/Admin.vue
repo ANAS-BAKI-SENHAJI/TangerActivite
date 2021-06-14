@@ -7,10 +7,10 @@
                 <div class="row">
                     <div class="col-md-3">
                         <ul style="list-style-type:none">
-                            <li class="active"><button class="btn" @click="setComponent('main')">Dashboard</button></li>
-                            <li><button class="btn" @click="setComponent('reservations')">Reservations</button></li>
-                            <li><button class="btn" @click="setComponent('activities')">Activities</button></li>
-                            <li><button class="btn" @click="setComponent('users')">Users</button></li>
+                            <li class="active"><button class="col btn btn-cool-blues btn-rounded " @click="setComponent('main')">Dashboard</button></li>
+                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('reservations')">Reservations</button></li>
+                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('activities')">Activities</button></li>
+                            <li><button class="col btn btn-cool-blues btn-rounded" @click="setComponent('users')">Users</button></li>
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -69,6 +69,28 @@
     </script>
 
     <style scoped>
-    .hero-section { height: 20vh; background: #ababab; align-items: center; margin-bottom: 20px; margin-top: -20px; }
-    .title { font-size: 60px; color: #ffffff; }
+    .hero-section { 
+        height: 20vh; 
+        background: #2193b0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        align-items: center; 
+        margin-bottom: 20px; 
+        margin-top: -20px; 
+        }
+    .title { 
+        font-size: 60px; color: #ffffff;
+       
+    }
+    .btn-cool-blues {
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+    border-radius: 20px;
+    }
+    li{
+        margin-bottom: 10px;
+    }
     </style>

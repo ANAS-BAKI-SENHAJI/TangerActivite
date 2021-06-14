@@ -1,7 +1,7 @@
  <template>
         <div>
             <div class="container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto">
-                <h2 class="title">All your reservations</h2>
+                <h2 class="title">Vos réservations</h2>
             </div>
             <div class="container">
                 <div class="row">
@@ -30,7 +30,15 @@
     <style scoped>
     .small-text { font-size: 14px; }
     .activity-box { border: 1px solid #cccccc;  }
-    .hero-section { background: #ababab; height: 20vh; align-items: center; margin-bottom: 20px; margin-top: -20px; }
+    .hero-section { 
+        background: #2193b0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+        height: 20vh; 
+        align-items: center; 
+        margin-bottom: 20px; 
+        margin-top: -20px; 
+        }
     .title { font-size: 60px; color: #ffffff; }
     .image{ width: 300px;}
     </style>
