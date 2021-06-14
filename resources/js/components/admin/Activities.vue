@@ -4,16 +4,17 @@
                 <thead>
                     <tr>
                         <td></td>
-                        <td>activity</td>
-                        <td>Price</td>
+                        <td>Activité</td>
+                        <td>Prix</td>
                         <td>Description</td>
-                        <td>duration_of_activity</td>
-                        <td>min_number_of_people</td>
-                        <td>max_number_of_people</td>
-                        <td>included_equipment</td>
-                        <td>included_transport</td>
-                        <td>equipments_included</td>
-                        <td>image</td>
+                        <td>Durée d'activité</td>
+                        <td>Nombre min des personnes</td>
+                        <td>Nombre max des personnes</td>
+                        <td>Equipement inclus</td>
+                        <td>Transport inclus</td>
+                        <td>Les équipements inclus</td>
+                        <td>Image</td>
+                        <td>Action</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,13 +30,16 @@
                         <td >{{activity.included_transport}}</td>
                         <td >{{activity.equipments_included}}</td>
                         <td >{{activity.image}}</td>
+                        <td>
+                            <button class="btn btn-danger btn-xs" @click="removeActivity(activity.id, index)">Supprimer</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <modal @close="endEditing" :activity="editingItem" v-show="editingItem != null"></modal>
             <modal @close="addActivity"  :activity="addingActivity" v-show="addingActivity != null"></modal>
             <br>
-            <button class="btn btn-primary" @click="newActivity">Add New activity</button>
+            <button class="btn btn-primary" @click="newActivity">Ajouter Activité</button>
         </div>
     </template>
     <style scoped>
@@ -47,6 +51,7 @@
 
     <script>
     import Modal from './ActivityModal'
+    
 
     export default {
         data() {
@@ -109,7 +114,22 @@
 
                 axios.post("/api/activities/", {name, price, description, duration_of_activity, min_number_of_people, max_number_of_people, included_equipment, included_transport, equipments_included, image})
                      .then(response => this.activities.push(activity))
+            },
+
+
+            removeActivity(id, index) {
+                axios.delete('/api/activities/'+id)
+                .then(resp => {
+                    this.activities.splice(index, 1);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
             }
+               
+
+                
+            
         }
     }
     </script>

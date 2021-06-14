@@ -1893,6 +1893,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -1982,6 +1986,15 @@ __webpack_require__.r(__webpack_exports__);
         image: image
       }).then(function (response) {
         return _this3.activities.push(activity);
+      });
+    },
+    removeActivity: function removeActivity(id, index) {
+      var _this4 = this;
+
+      axios["delete"]('/api/activities/' + id).then(function (resp) {
+        _this4.activities.splice(index, 1);
+      })["catch"](function (error) {
+        console.log(error);
       });
     }
   }
@@ -2415,9 +2428,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   beforeMount: function beforeMount() {
     this.setComponent(this.$route.params.page);
-    this.user = JSON.parse(localStorage.getItem('bigStore.  d fuser'));
+    this.user = JSON.parse(localStorage.getItem('activityStore.  d fuser'));
     axios.defaults.headers.common['Content-Type'] = 'application/json';
-    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt');
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('activityStore.jwt');
   },
   methods: {
     setComponent: function setComponent(value) {
@@ -2510,7 +2523,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       name: null,
       user_type: 0,
-      isLoggedIn: localStorage.getItem('bigStore.jwt') != null
+      isLoggedIn: localStorage.getItem('activityStore.jwt') != null
     };
   },
   mounted: function mounted() {
@@ -2519,18 +2532,18 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     setDefaults: function setDefaults() {
       if (this.isLoggedIn) {
-        var user = JSON.parse(localStorage.getItem('bigStore.user'));
+        var user = JSON.parse(localStorage.getItem('activityStore.user'));
         this.name = user.name;
         this.user_type = user.is_admin;
       }
     },
     change: function change() {
-      this.isLoggedIn = localStorage.getItem('bigStore.jwt') != null;
+      this.isLoggedIn = localStorage.getItem('activityStore.jwt') != null;
       this.setDefaults();
     },
     logout: function logout() {
-      localStorage.removeItem('bigStore.jwt');
-      localStorage.removeItem('bigStore.user');
+      localStorage.removeItem('activityStore.jwt');
+      localStorage.removeItem('activityStore.user');
       this.change();
       this.$router.push('/');
     }
@@ -2665,7 +2678,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    this.isLoggedIn = localStorage.getItem('bigStore.jwt') != null;
+    this.isLoggedIn = localStorage.getItem('activityStore.jwt') != null;
   },
   beforeMount: function beforeMount() {
     var _this = this;
@@ -2674,10 +2687,10 @@ __webpack_require__.r(__webpack_exports__);
       return _this.activity = response.data;
     });
 
-    if (localStorage.getItem('bigStore.jwt') != null) {
-      this.user = JSON.parse(localStorage.getItem('bigStore.user'));
+    if (localStorage.getItem('activityStore.jwt') != null) {
+      this.user = JSON.parse(localStorage.getItem('activityStore.user'));
       axios.defaults.headers.common['Content-Type'] = 'application/json';
-      axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt');
+      axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('activityStore.jwt');
     }
   },
   methods: {
@@ -2728,6 +2741,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -2916,7 +2933,7 @@ __webpack_require__.r(__webpack_exports__);
 
     axios.get("api/activities/").then(function (response) {
       return _this.activities = response.data;
-    }), this.isLoggedIn = localStorage.getItem('bigStore.jwt') != null;
+    }), this.isLoggedIn = localStorage.getItem('activityStore.jwt') != null;
   }
 });
 
@@ -3004,10 +3021,10 @@ __webpack_require__.r(__webpack_exports__);
         }).then(function (response) {
           var user = response.data.user;
           var is_admin = user.is_admin;
-          localStorage.setItem('bigStore.user', JSON.stringify(user));
-          localStorage.setItem('bigStore.jwt', response.data.token);
+          localStorage.setItem('activityStore.user', JSON.stringify(user));
+          localStorage.setItem('activityStore.jwt', response.data.token);
 
-          if (localStorage.getItem('bigStore.jwt') != null) {
+          if (localStorage.getItem('activityStore.jwt') != null) {
             _this.$emit('loggedIn');
 
             if (_this.$route.params.nextUrl != null) {
@@ -3174,10 +3191,10 @@ __webpack_require__.r(__webpack_exports__);
         city: city
       }).then(function (response) {
         var data = response.data;
-        localStorage.setItem('bigStore.user', JSON.stringify(data.user));
-        localStorage.setItem('bigStore.jwt', data.token);
+        localStorage.setItem('activityStore.user', JSON.stringify(data.user));
+        localStorage.setItem('activityStore.jwt', data.token);
 
-        if (localStorage.getItem('bigStore.jwt') != null) {
+        if (localStorage.getItem('activityStore.jwt') != null) {
           _this.$emit('loggedIn');
 
           var nextUrl = _this.$route.params.nextUrl;
@@ -3338,9 +3355,9 @@ __webpack_require__.r(__webpack_exports__);
   beforeMount: function beforeMount() {
     var _this = this;
 
-    this.user = JSON.parse(localStorage.getItem('bigStore.user'));
+    this.user = JSON.parse(localStorage.getItem('activityStore.user'));
     axios.defaults.headers.common['Content-Type'] = 'application/json';
-    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('bigStore.jwt');
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('activityStore.jwt');
     axios.get("api/users/".concat(this.user.id, "/reservations")).then(function (response) {
       return _this.reservations = response.data;
     });
@@ -3455,7 +3472,7 @@ router.beforeEach(function (to, from, next) {
   if (to.matched.some(function (record) {
     return record.meta.requiresAuth;
   })) {
-    if (localStorage.getItem('bigStore.jwt') == null) {
+    if (localStorage.getItem('activityStore.jwt') == null) {
       next({
         path: '/login',
         params: {
@@ -3463,7 +3480,7 @@ router.beforeEach(function (to, from, next) {
         }
       });
     } else {
-      var user = JSON.parse(localStorage.getItem('bigStore.user'));
+      var user = JSON.parse(localStorage.getItem('activityStore.user'));
 
       if (to.matched.some(function (record) {
         return record.meta.is_admin;
@@ -40685,7 +40702,22 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(activity.equipments_included))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(activity.image))])
+                _c("td", [_vm._v(_vm._s(activity.image))]),
+                _vm._v(" "),
+                _c("td", [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger btn-xs",
+                      on: {
+                        click: function($event) {
+                          return _vm.removeActivity(activity.id, index)
+                        }
+                      }
+                    },
+                    [_vm._v("Supprimer")]
+                  )
+                ])
               ]
             )
           }),
@@ -40724,7 +40756,7 @@ var render = function() {
       _c(
         "button",
         { staticClass: "btn btn-primary", on: { click: _vm.newActivity } },
-        [_vm._v("Add New activity")]
+        [_vm._v("Ajouter Activité")]
       )
     ],
     1
@@ -40739,25 +40771,27 @@ var staticRenderFns = [
       _c("tr", [
         _c("td"),
         _vm._v(" "),
-        _c("td", [_vm._v("activity")]),
+        _c("td", [_vm._v("Activité")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Price")]),
+        _c("td", [_vm._v("Prix")]),
         _vm._v(" "),
         _c("td", [_vm._v("Description")]),
         _vm._v(" "),
-        _c("td", [_vm._v("duration_of_activity")]),
+        _c("td", [_vm._v("Durée d'activité")]),
         _vm._v(" "),
-        _c("td", [_vm._v("min_number_of_people")]),
+        _c("td", [_vm._v("Nombre min des personnes")]),
         _vm._v(" "),
-        _c("td", [_vm._v("max_number_of_people")]),
+        _c("td", [_vm._v("Nombre max des personnes")]),
         _vm._v(" "),
-        _c("td", [_vm._v("included_equipment")]),
+        _c("td", [_vm._v("Equipement inclus")]),
         _vm._v(" "),
-        _c("td", [_vm._v("included_transport")]),
+        _c("td", [_vm._v("Transport inclus")]),
         _vm._v(" "),
-        _c("td", [_vm._v("equipments_included")]),
+        _c("td", [_vm._v("Les équipements inclus")]),
         _vm._v(" "),
-        _c("td", [_vm._v("image")])
+        _c("td", [_vm._v("Image")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("Action")])
       ])
     ])
   }
@@ -41098,7 +41132,7 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                        Finish\n                    "
+                      "\n                        Sauvegarder\n                    "
                     )
                   ]
                 )
@@ -41116,13 +41150,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v(" Name: ")])])
+    return _c("td", [_c("label", [_vm._v(" Nom: ")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v("Price: ")])])
+    return _c("td", [_c("label", [_vm._v("Prix: ")])])
   },
   function() {
     var _vm = this
@@ -41134,37 +41168,37 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v(" duration_of_activity: ")])])
+    return _c("td", [_c("label", [_vm._v("Durée d'activité : ")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v("min_number_of_people: ")])])
+    return _c("td", [_c("label", [_vm._v("Nombre minimale des personnes : ")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v("max_number_of_people: ")])])
+    return _c("td", [_c("label", [_vm._v("Nombre maximale des personnes : ")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v("included_equipment: ")])])
+    return _c("td", [_c("label", [_vm._v("Equipement inclus : ")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v("included_transport: ")])])
+    return _c("td", [_c("label", [_vm._v("Transport inclus : ")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("label", [_vm._v(" equipments_included: ")])])
+    return _c("td", [_c("label", [_vm._v(" Les équipements inclus : ")])])
   },
   function() {
     var _vm = this
@@ -41206,17 +41240,17 @@ var render = function() {
         _c(
           "a",
           { staticClass: "color", attrs: { href: "/admin/reservations" } },
-          [_vm._v("Reservations (" + _vm._s(_vm.reservations.length) + ")")]
+          [_vm._v("Réservations (" + _vm._s(_vm.reservations.length) + ")")]
         ),
         _vm._v("        \n        "),
         _c(
           "a",
           { staticClass: "color", attrs: { href: "/admin/activities" } },
-          [_vm._v("Activities (" + _vm._s(_vm.activities.length) + ")")]
+          [_vm._v("Activités (" + _vm._s(_vm.activities.length) + ")")]
         ),
         _vm._v("        \n        "),
         _c("a", { staticClass: "color", attrs: { href: "/admin/users" } }, [
-          _vm._v("Users (" + _vm._s(_vm.users.length) + ")")
+          _vm._v("Utilisateurs (" + _vm._s(_vm.users.length) + ")")
         ])
       ]
     )
@@ -41281,7 +41315,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Finished")]
+                    [_vm._v("Terminée")]
                   )
                 ])
               : _vm._e()
@@ -41301,17 +41335,17 @@ var staticRenderFns = [
       _c("tr", [
         _c("td"),
         _vm._v(" "),
-        _c("td", [_vm._v("User ID")]),
+        _c("td", [_vm._v("Utilisateur ID")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Activity")]),
+        _c("td", [_vm._v("Activité")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Reservation_date")]),
+        _c("td", [_vm._v("Date de Réservation")]),
         _vm._v(" "),
         _c("td", [_vm._v("Prix")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Reservation_time")]),
+        _c("td", [_vm._v("Heure de réservation")]),
         _vm._v(" "),
-        _c("td", [_vm._v("is Finished?")]),
+        _c("td", [_vm._v("C'est terminée?")]),
         _vm._v(" "),
         _c("td", [_vm._v("Action")])
       ])
@@ -41373,17 +41407,17 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("td", [_vm._v("User ID")]),
+        _c("td", [_vm._v("Utilisateur ID")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Name")]),
+        _c("td", [_vm._v("Nom")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Numero Tel")]),
+        _c("td", [_vm._v("Numéro Tel")]),
         _vm._v(" "),
         _c("td", [_vm._v("Email")]),
         _vm._v(" "),
-        _c("td", [_vm._v("joindre")]),
+        _c("td", [_vm._v("Rejoint à")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Total Reservations")])
+        _c("td", [_vm._v("Totale des réservations")])
       ])
     ])
   }
@@ -41428,7 +41462,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Dashboard")]
+                [_vm._v("Tableau de bord")]
               )
             ]),
             _vm._v(" "),
@@ -41443,7 +41477,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Reservations")]
+                [_vm._v("Réservations")]
               )
             ]),
             _vm._v(" "),
@@ -41458,7 +41492,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Activities")]
+                [_vm._v("Activités")]
               )
             ]),
             _vm._v(" "),
@@ -41473,7 +41507,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Users")]
+                [_vm._v("Utilisateurs")]
               )
             ])
           ])
@@ -41500,7 +41534,11 @@ var staticRenderFns = [
         staticClass:
           "container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto"
       },
-      [_c("h2", { staticClass: "title" }, [_vm._v("Admin Dashboard")])]
+      [
+        _c("h2", { staticClass: "title" }, [
+          _vm._v("Tableau de bord administrateur")
+        ])
+      ]
     )
   }
 ]
@@ -41615,7 +41653,7 @@ var render = function() {
                             staticClass: "nav-link",
                             on: { click: _vm.logout }
                           },
-                          [_vm._v(" Logout")]
+                          [_vm._v(" Déconnexion")]
                         )
                       : _vm._e()
                   ],
@@ -41709,7 +41747,7 @@ var render = function() {
                       _c(
                         "label",
                         { staticClass: "col-md-4 float-left sizing" },
-                        [_vm._v("Reservation Date: ")]
+                        [_vm._v("Date de Réservation: ")]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -41746,7 +41784,7 @@ var render = function() {
                           staticClass: "col-md-4 float-left pr-2 sizing",
                           attrs: { for: "reservation_time" }
                         },
-                        [_vm._v("Reservation Time:")]
+                        [_vm._v("Heure de Réservation:")]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-md-4" }, [
@@ -41805,7 +41843,7 @@ var render = function() {
                         "col-md-4 btn btn-sm btn-success float-right continu",
                       on: { click: _vm.placeReservation }
                     },
-                    [_vm._v("Continue")]
+                    [_vm._v("Continuer")]
                   )
                 : _vm._e()
             ])
@@ -41824,7 +41862,7 @@ var render = function() {
                     staticClass: "col-md-4 btn btn-primary float-left",
                     on: { click: _vm.login }
                   },
-                  [_vm._v("Login")]
+                  [_vm._v("Connexion")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -41833,7 +41871,7 @@ var render = function() {
                     staticClass: "col-md-4 btn btn-danger float-right",
                     on: { click: _vm.register }
                   },
-                  [_vm._v("Create an account")]
+                  [_vm._v("Inscription")]
                 )
               ])
             : _vm._e()
@@ -41883,19 +41921,30 @@ var render = function() {
               attrs: { src: "correct.png" }
             }),
             _c("br"),
-            _vm._v(" "),
+            _vm._v("\n<<<<<<< HEAD\n                    "),
             _c("span", { staticClass: "medium-text" }, [
               _vm._v("votre réservation a été ajouté.")
             ]),
             _c("br"),
-            _vm._v(" "),
+            _vm._v("\n=======\n                    "),
+            _c("span", { staticClass: "medium-text" }, [
+              _vm._v("vos réservations ont été ajoutées.")
+            ]),
+            _c("br"),
+            _vm._v(
+              "\n>>>>>>> eac0f5e5b0d8d7447faa18c1a21884681d10acab\n                    "
+            ),
             _c(
               "router-link",
               {
                 staticClass: "small-link",
                 attrs: { to: { name: "userboard" } }
               },
-              [_vm._v("\n                Voir vos réservations\n            ")]
+              [
+                _vm._v(
+                  "\n                        Voir vos réservations\n                    "
+                )
+              ]
             )
           ],
           1
@@ -42172,7 +42221,7 @@ var render = function() {
                           staticClass: "btn",
                           attrs: { to: { name: "register" } }
                         },
-                        [_vm._v("Register")]
+                        [_vm._v("Connexion")]
                       )
                     : _vm._e()
                 ],
@@ -42218,7 +42267,7 @@ var staticRenderFns = [
         staticClass:
           "quote container-fluid d-flex align-content-center justify-content-center flex-wrap ml-auto"
       },
-      [_c("h2", [_vm._v("Feel Free To Discover")])]
+      [_c("h2", [_vm._v("N'hésitez pas à découvrir")])]
     )
   },
   function() {
@@ -42228,7 +42277,7 @@ var staticRenderFns = [
     return _c("tr", [
       _c("td", { staticClass: "spLeft" }, [
         _c("div", { staticClass: "background-video-content" }, [
-          _c("h3", { staticClass: "spTitre" }, [_vm._v("Experience")]),
+          _c("h3", { staticClass: "spTitre" }, [_vm._v("Experiences")]),
           _vm._v(" "),
           _c("p", { attrs: { id: "spParag" } }, [
             _vm._v(
@@ -42256,9 +42305,7 @@ var staticRenderFns = [
           _c("span")
         ]),
         _vm._v(" "),
-        _c("p", [
-          _vm._v("About the company, little discription will goes here.. ")
-        ])
+        _c("p", [_vm._v("Agence d'activités de divertissement à Tanger.")])
       ])
     ])
   },
@@ -42300,7 +42347,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h5", { staticClass: "widget-title" }, [
-      _vm._v("Register"),
+      _vm._v("Inscription"),
       _c("span")
     ])
   },
@@ -42461,7 +42508,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "wrapper fadeInDown" }, [
     _c("div", { attrs: { id: "formContent" } }, [
-      _c("h2", { staticClass: "active" }, [_vm._v(" S'inscrire ")]),
+      _c("h2", { staticClass: "active" }, [_vm._v("Connexion")]),
       _vm._v(" "),
       _c("form", [
         _c("input", {
@@ -42520,7 +42567,7 @@ var render = function() {
         _vm._v(" "),
         _c("input", {
           staticClass: "fadeIn fourth",
-          attrs: { type: "submit", value: "Log In" },
+          attrs: { type: "submit", value: "Continuer" },
           on: { click: _vm.handleSubmit }
         })
       ])
@@ -42552,7 +42599,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "wrapper fadeInDown" }, [
     _c("div", { attrs: { id: "formContent" } }, [
-      _c("h2", { staticClass: "active" }, [_vm._v(" Registration ")]),
+      _c("h2", { staticClass: "active" }, [_vm._v(" Inscription ")]),
       _vm._v(" "),
       _c("form", [
         _c("input", {
@@ -42568,7 +42615,7 @@ var render = function() {
           attrs: {
             id: "name",
             type: "text",
-            placeholder: "Nom complete",
+            placeholder: "Nom complet",
             required: "",
             autofocus: ""
           },
@@ -42677,7 +42724,7 @@ var render = function() {
           attrs: {
             id: "phone",
             type: "text",
-            placeholder: "Num Tel",
+            placeholder: "Numero Tel",
             required: "",
             autofocus: ""
           },
@@ -42705,7 +42752,7 @@ var render = function() {
           attrs: {
             id: "age",
             type: "text",
-            placeholder: "age",
+            placeholder: "Age",
             required: "",
             autofocus: ""
           },
@@ -42778,7 +42825,7 @@ var render = function() {
         _vm._v(" "),
         _c("input", {
           staticClass: "fadeIn fourth",
-          attrs: { type: "submit", value: "Log In" },
+          attrs: { type: "submit", value: "Continuer" },
           on: { click: _vm.handleSubmit }
         })
       ])
@@ -42831,7 +42878,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticClass: "sizing " }, [
                   _vm._v(
-                    "Durée d'activite: " +
+                    "Durée d'activité: " +
                       _vm._s(_vm.activity.duration_of_activity)
                   )
                 ])
@@ -42873,7 +42920,7 @@ var render = function() {
                   { staticClass: "small-text text-muted float-left" },
                   [
                     _vm._v(
-                      "  Min nombre de personne: " +
+                      "  Nombre minimale de personnes: " +
                         _vm._s(_vm.activity.min_number_of_people)
                     )
                   ]
@@ -42890,7 +42937,7 @@ var render = function() {
                   { staticClass: "small-text text-muted float-left" },
                   [
                     _vm._v(
-                      "  Max nombre de personne: " +
+                      "  Nombre maximale de personnes: " +
                         _vm._s(_vm.activity.max_number_of_people)
                     )
                   ]
@@ -42909,7 +42956,7 @@ var render = function() {
                   { staticClass: "small-text text-muted float-left" },
                   [
                     _vm._v(
-                      "  équipement inclus: " +
+                      "  inclure équipement? : " +
                         _vm._s(_vm.activity.included_equipment)
                     )
                   ]
@@ -42923,7 +42970,7 @@ var render = function() {
                   { staticClass: "small-text text-muted float-left" },
                   [
                     _vm._v(
-                      "  transport inclus: " +
+                      "  inclure transport? : " +
                         _vm._s(_vm.activity.included_transport)
                     )
                   ]
@@ -42936,7 +42983,7 @@ var render = function() {
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
-          _c("h5", [_vm._v("les équipment inclus")]),
+          _c("h5", [_vm._v("Les équipment inclus")]),
           _vm._v(" "),
           _c("p", { staticClass: "small-text text-muted float-left" }, [
             _vm._v(_vm._s(_vm.activity.equipments_included))
@@ -42951,7 +42998,7 @@ var render = function() {
                 "col-md-4 btn btn-sm btn-primary float-right reserver",
               attrs: { to: { path: "/checkout?pid=" + _vm.activity.id } }
             },
-            [_vm._v("Reserver")]
+            [_vm._v("Réserver")]
           )
         ],
         1

@@ -1,9 +1,9 @@
   <template>
         <div class="row">
             <div class="col-md-8 activity-box d-flex align-content-center justify-content-center flex-wrap big-text">
-                <a href='/admin/reservations' class="color">Reservations ({{reservations.length}})</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href='/admin/activities' class="color">Activities ({{activities.length}})</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href='/admin/users' class="color">Users ({{users.length}})</a>
+                <a href='/admin/reservations' class="color">Réservations ({{reservations.length}})</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='/admin/activities' class="color">Activités ({{activities.length}})</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='/admin/users' class="color">Utilisateurs ({{users.length}})</a>
             </div>
 
         </div>

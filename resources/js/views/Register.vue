@@ -72,19 +72,19 @@
             <div class="wrapper fadeInDown">
   <div id="formContent">
 
-    <h2 class="active"> Registration </h2>
+    <h2 class="active"> Inscription </h2>
 
     <form>
-      <input id="name" type="text" class=" fadeIn second" v-model="name" placeholder="Nom complete" required autofocus>
+      <input id="name" type="text" class=" fadeIn second" v-model="name" placeholder="Nom complet" required autofocus>
           <input id="email" type="email" class=" fadeIn third" v-model="email" placeholder="Email" required>
          <input id="password" type="password" class=" fadeIn second" v-model="password" placeholder="Password" required>
         <input id="password-confirm" type="password" class=" fadeIn third" v-model="password_confirmation" placeholder="Confirmer Password" required>
-        <input id="phone" type="text" class=" fadeIn second" v-model="phone" placeholder="Num Tel" required autofocus>
-       <input id="age" type="text" class=" fadeIn third" v-model="age" placeholder="age" required autofocus>
+        <input id="phone" type="text" class=" fadeIn second" v-model="phone" placeholder="Numero Tel" required autofocus>
+       <input id="age" type="text" class=" fadeIn third" v-model="age" placeholder="Age" required autofocus>
        <input id="country" type="text" class=" fadeIn second" v-model="country" placeholder="Pays" required autofocus>
        <input id="city" type="text" class=" fadeIn third" v-model="city" placeholder="Ville" required autofocus>
 
-      <input type="submit" class="fadeIn fourth" value="Log In" @click="handleSubmit">
+      <input type="submit" class="fadeIn fourth" value="Continuer" @click="handleSubmit">
     </form>
 
   </div>
@@ -125,9 +125,9 @@
                 let city = this.city
                 axios.post('api/register', {name, email, password, c_password, phone, age, country, city}).then(response => {
                     let data = response.data
-                    localStorage.setItem('bigStore.user', JSON.stringify(data.user))
-                    localStorage.setItem('bigStore.jwt', data.token)
-                    if (localStorage.getItem('bigStore.jwt') != null) {
+                    localStorage.setItem('activityStore.user', JSON.stringify(data.user))
+                    localStorage.setItem('activityStore.jwt', data.token)
+                    if (localStorage.getItem('activityStore.jwt') != null) {
                         this.$emit('loggedIn')
                         let nextUrl = this.$route.params.nextUrl
                         this.$router.push((nextUrl != null ? nextUrl : '/'))

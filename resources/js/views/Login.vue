@@ -34,12 +34,12 @@
     <div class="wrapper fadeInDown">
   <div id="formContent">
 
-    <h2 class="active"> S'inscrire </h2>
+    <h2 class="active">Connexion</h2>
 
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" v-model="email">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" v-model="password">
-      <input type="submit" class="fadeIn fourth" value="Log In" @click="handleSubmit">
+      <input type="submit" class="fadeIn fourth" value="Continuer" @click="handleSubmit">
     </form>
 
   </div>
@@ -66,10 +66,10 @@
                             let user = response.data.user
                             let is_admin = user.is_admin
                         
-                            localStorage.setItem('bigStore.user', JSON.stringify(user))
-                            localStorage.setItem('bigStore.jwt', response.data.token)
+                            localStorage.setItem('activityStore.user', JSON.stringify(user))
+                            localStorage.setItem('activityStore.jwt', response.data.token)
 
-                            if (localStorage.getItem('bigStore.jwt') != null) {
+                            if (localStorage.getItem('activityStore.jwt') != null) {
                                 this.$emit('loggedIn')
                                 if (this.$route.params.nextUrl != null) {
                                     this.$router.push(this.$route.params.nextUrl)

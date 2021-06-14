@@ -9,7 +9,7 @@
                             </td>
                             <td width="25%">
                                 <h3 class="title sizing" v-html="activity.name"></h3>
-                                <p class="sizing ">Durée d'activite: {{activity.duration_of_activity}}</p>
+                                <p class="sizing ">Durée d'activité: {{activity.duration_of_activity}}</p>
                             </td>  
                         </tr>  
                         <tr>
@@ -31,20 +31,20 @@
                     <hr>
                     <table class="info">
                         <tr>
-                            <td><img src="/stick-man.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;Min nombre de personne: {{activity.min_number_of_people}}</span></td>
-                            <td><img src="/users.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;Max nombre de personne: {{activity.max_number_of_people}}</span></td>
+                            <td><img src="/stick-man.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;Nombre minimale de personnes: {{activity.min_number_of_people}}</span></td>
+                            <td><img src="/users.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;Nombre maximale de personnes: {{activity.max_number_of_people}}</span></td>
                         </tr>
                         <tr>
-                            <td><img src="/backpack.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;équipement inclus: {{activity.included_equipment}}</span></td>
-                            <td><img src="/tr.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;transport inclus: {{activity.included_transport}}</span></td>
+                            <td><img src="/backpack.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;inclure équipement? : {{activity.included_equipment}}</span></td>
+                            <td><img src="/tr.png" class="sIcon"><span class="small-text text-muted float-left">&nbsp;&nbsp;inclure transport? : {{activity.included_transport}}</span></td>
                         </tr>
                     </table>
                     <br>
                     <hr>
-                    <h5>les équipment inclus</h5>
+                    <h5>Les équipment inclus</h5>
                     <p class="small-text text-muted float-left">{{activity.equipments_included}}</p>
                     <br>
-                    <router-link :to="{ path: '/checkout?pid='+activity.id }" class="col-md-4 btn btn-sm btn-primary float-right reserver">Reserver</router-link>
+                    <router-link :to="{ path: '/checkout?pid='+activity.id }" class="col-md-4 btn btn-sm btn-primary float-right reserver">Réserver</router-link>
                 </div>
             </div>
         </div>

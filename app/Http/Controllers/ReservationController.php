@@ -22,7 +22,7 @@ class ReservationController extends Controller
         return response()->json([
             'status'    => $status,
             'data'      => $reservation,
-            'message'   => $status ? 'Reservation Finished!' : 'Error Finishing Reservation'
+            'message'   => $status ? 'Réservation terminée!' : 'Erreur dans la fin de réservation'
         ]);
     }
 
@@ -39,7 +39,7 @@ class ReservationController extends Controller
         return response()->json([
             'status' => (bool) $reservation,
             'data'   => $reservation,
-            'message' => $reservation ? 'Reservation Created!' : 'Error Creating Reservation'
+            'message' => $reservation ? 'Réservation créée!' : 'Erreur lors de la création de la réservation'
         ]);
     }
 
@@ -56,7 +56,7 @@ class ReservationController extends Controller
 
         return response()->json([
             'status' => $status,
-            'message' => $status ? 'Reservation Updated!' : 'Error Updating Reservation'
+            'message' => $status ? 'Réservation mise à jour!' : 'Erreur lors de la mise à jour de la réservation'
         ]);
     }
 
@@ -66,7 +66,7 @@ class ReservationController extends Controller
 
         return response()->json([
             'status' => $status,
-            'message' => $status ? 'Reservation Deleted!' : 'Error Deleting Reservation'
+            'message' => $status ? 'Réservation supprimée!' : 'Erreur lors de la suppression de la réservation'
         ]);
     }
 }

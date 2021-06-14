@@ -4,7 +4,11 @@
                 <h2>
                     <span class="title"><strong>Merci!</strong></span>
                     <img src="correct.png" class="icon image-clignote" ><br>
+<<<<<<< HEAD
                     <span class="medium-text">votre réservation a été ajouté.</span><br>
+=======
+                    <span class="medium-text">vos réservations ont été ajoutées.</span><br>
+>>>>>>> eac0f5e5b0d8d7447faa18c1a21884681d10acab
                     <router-link :to="{name: 'userboard'}" class="small-link">
                         Voir vos réservations
                     </router-link>
