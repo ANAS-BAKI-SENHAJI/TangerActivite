@@ -1893,6 +1893,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -1982,6 +1986,15 @@ __webpack_require__.r(__webpack_exports__);
         image: image
       }).then(function (response) {
         return _this3.activities.push(activity);
+      });
+    },
+    removeActivity: function removeActivity(id, index) {
+      var _this4 = this;
+
+      axios["delete"]('/api/activities/' + id).then(function (resp) {
+        _this4.activities.splice(index, 1);
+      })["catch"](function (error) {
+        console.log(error);
       });
     }
   }
@@ -40451,7 +40464,22 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(activity.equipments_included))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(activity.image))])
+                _c("td", [_vm._v(_vm._s(activity.image))]),
+                _vm._v(" "),
+                _c("td", [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger btn-xs",
+                      on: {
+                        click: function($event) {
+                          return _vm.removeActivity(activity.id, index)
+                        }
+                      }
+                    },
+                    [_vm._v("Delete")]
+                  )
+                ])
               ]
             )
           }),
@@ -40523,7 +40551,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("td", [_vm._v("equipments_included")]),
         _vm._v(" "),
-        _c("td", [_vm._v("image")])
+        _c("td", [_vm._v("image")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("Action")])
       ])
     ])
   }

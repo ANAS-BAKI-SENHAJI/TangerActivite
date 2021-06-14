@@ -14,6 +14,7 @@
                         <td>included_transport</td>
                         <td>equipments_included</td>
                         <td>image</td>
+                        <td>Action</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +30,9 @@
                         <td >{{activity.included_transport}}</td>
                         <td >{{activity.equipments_included}}</td>
                         <td >{{activity.image}}</td>
+                        <td>
+                            <button class="btn btn-danger btn-xs" @click="removeActivity(activity.id, index)">Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -47,6 +51,7 @@
 
     <script>
     import Modal from './ActivityModal'
+    
 
     export default {
         data() {
@@ -109,7 +114,22 @@
 
                 axios.post("/api/activities/", {name, price, description, duration_of_activity, min_number_of_people, max_number_of_people, included_equipment, included_transport, equipments_included, image})
                      .then(response => this.activities.push(activity))
+            },
+
+
+            removeActivity(id, index) {
+                axios.delete('/api/activities/'+id)
+                .then(resp => {
+                    this.activities.splice(index, 1);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
             }
+               
+
+                
+            
         }
     }
     </script>
