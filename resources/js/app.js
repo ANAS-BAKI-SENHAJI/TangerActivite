@@ -17,6 +17,7 @@ import Login from './views/Login'
 import Register from './views/Register'
 import SingleActivity from './views/SingleActivity'
 import Checkout from './views/Checkout'
+import Experiance from './views/Experiance'
 import Confirmation from './views/Confirmation'
 import UserBoard from './views/UserBoard'
 import Admin from './views/Admin'
@@ -48,6 +49,11 @@ const router = new VueRouter({
             path: '/confirmation',
             name: 'confirmation',
             component: Confirmation
+        },
+        {
+            path: '/experiance',
+            name: 'experiance',
+            component: Experiance
         },
         {
             path: '/checkout',
