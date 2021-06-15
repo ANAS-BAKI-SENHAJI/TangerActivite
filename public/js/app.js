@@ -42382,7 +42382,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", { attrs: { id: "spParag" } }, [
                         _vm._v(
-                          "Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius."
+                          "Découvrez les expériences de nos clients avec nos activités"
                         )
                       ]),
                       _vm._v(" "),
@@ -42431,7 +42431,7 @@ var render = function() {
                           { attrs: { to: { name: "experiance" } } },
                           [
                             _c("a", { attrs: { href: "" } }, [
-                              _vm._v(" En savoir plus")
+                              _vm._v(" Experiences")
                             ])
                           ]
                         )

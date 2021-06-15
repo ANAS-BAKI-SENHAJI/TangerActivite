@@ -37,7 +37,7 @@
                                 <td class="spLeft">
                                 <div class="background-video-content">
                                     <h3 class="spTitre">Experiences</h3>
-                                    <p id="spParag">Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius.</p>
+                                    <p id="spParag">Découvrez les expériences de nos clients avec nos activités</p>
                                     <router-link :to="{name: 'experiance'}">
                                     <button class="btn">En savoir plus</button>
                                     </router-link>
@@ -94,7 +94,7 @@
 <h5 class="widget-title">Liens<span></span></h5>
 <ul class="thumbnail-widget">
 <li>
-<div class="thumb-content"><router-link :to="{name: 'experiance'}"><a href=""> En savoir plus</a></router-link></div> 
+<div class="thumb-content"><router-link :to="{name: 'experiance'}"><a href=""> Experiences</a></router-link></div> 
 </li>
 </ul>
 </div>
@@ -179,7 +179,6 @@
     .hero-section .HomeImage{
         width:100%;
         height:100%;
-        
     }
     .quote{
         background: black;
