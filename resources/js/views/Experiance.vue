@@ -5,7 +5,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 offset-1"  >
+            <div class="col-md-12 align-content-center justify-content-center "  >
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3   shape">
@@ -22,7 +22,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="col-md-3  shape">
+                        <div class="col-md-3 offset-md-1  shape">
                             <table>
                                 <tr>
                                     <td>
@@ -36,7 +36,53 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="col-md-3  shape">
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td>
+                                        le 23/05/2020, cap spartel
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/img1.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3   shape">
+                            <table>
+                                <tr>
+                                    <td>
+                                        le 23/05/2020, cap spartel
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/img1.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td>
+                                        le 23/05/2020, cap spartel
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/img1.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
                             <table>
                                 <tr>
                                     <td>
@@ -87,7 +133,7 @@
     }
     .shape{
         border-radius: 10px;
-        margin: 10px;
+        margin-top: 10px ;
         background-color: #ebebeb;;
     }
 </style>

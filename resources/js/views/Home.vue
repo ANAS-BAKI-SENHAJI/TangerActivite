@@ -38,7 +38,9 @@
                                 <div class="background-video-content">
                                     <h3 class="spTitre">Experiences</h3>
                                     <p id="spParag">Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius.</p>
+                                    <router-link :to="{name: 'experiance'}">
                                     <button class="btn">En savoir plus</button>
+                                    </router-link>
                                 </div>
                                 </td>
                                 <td></td>

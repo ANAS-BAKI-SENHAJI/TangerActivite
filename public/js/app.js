@@ -2756,10 +2756,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2775,6 +2771,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -8190,7 +8188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-ead6c166] {\n    font-size: 14px;\n}\n.hero-section[data-v-ead6c166] {\n    height: 60vh;\n    align-items: center;\n    margin-top: -40px;\n    padding: 0%;\n}\n.title[data-v-ead6c166] {\n    font-size: 60px;\n    color: #ffffff;\n}\n.image[data-v-ead6c166]{\n    width: 100%;\n    border-radius: 10px;\n}\n.hero-section .HomeImage[data-v-ead6c166]{\n    width:100%;\n    height:100%;\n}\ntd[data-v-ead6c166]{\n    text-align: center;\n    padding: 10px;\n}\n.shape[data-v-ead6c166]{\n    border-radius: 10px;\n    margin: 10px;\n    background-color: #ebebeb;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-ead6c166] {\n    font-size: 14px;\n}\n.hero-section[data-v-ead6c166] {\n    height: 60vh;\n    align-items: center;\n    margin-top: -40px;\n    padding: 0%;\n}\n.title[data-v-ead6c166] {\n    font-size: 60px;\n    color: #ffffff;\n}\n.image[data-v-ead6c166]{\n    width: 100%;\n    border-radius: 10px;\n}\n.hero-section .HomeImage[data-v-ead6c166]{\n    width:100%;\n    height:100%;\n}\ntd[data-v-ead6c166]{\n    text-align: center;\n    padding: 10px;\n}\n.shape[data-v-ead6c166]{\n    border-radius: 10px;\n    margin-top: 10px ;\n    background-color: #ebebeb;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41921,30 +41919,19 @@ var render = function() {
               attrs: { src: "correct.png" }
             }),
             _c("br"),
-            _vm._v("\n<<<<<<< HEAD\n                    "),
+            _vm._v(" "),
             _c("span", { staticClass: "medium-text" }, [
               _vm._v("votre réservation a été ajouté.")
             ]),
             _c("br"),
-            _vm._v("\n=======\n                    "),
-            _c("span", { staticClass: "medium-text" }, [
-              _vm._v("vos réservations ont été ajoutées.")
-            ]),
-            _c("br"),
-            _vm._v(
-              "\n>>>>>>> eac0f5e5b0d8d7447faa18c1a21884681d10acab\n                    "
-            ),
+            _vm._v(" "),
             _c(
               "router-link",
               {
                 staticClass: "small-link",
                 attrs: { to: { name: "userboard" } }
               },
-              [
-                _vm._v(
-                  "\n                        Voir vos réservations\n                    "
-                )
-              ]
+              [_vm._v("\n                Voir vos réservations\n            ")]
             )
           ],
           1
@@ -42009,71 +41996,142 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-12 offset-1" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-3   shape" }, [
-                  _c("table", [
-                    _c("tr", [
-                      _c("td", [
-                        _vm._v(
-                          "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
-                        )
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-md-12 align-content-center justify-content-center "
+            },
+            [
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-3   shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/img1.jpg", width: "100%" }
+                          })
+                        ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", [
-                        _c("img", {
-                          attrs: { src: "/img1.jpg", width: "100%" }
-                        })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1  shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/img1.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/img1.jpg", width: "100%" }
+                          })
+                        ])
                       ])
                     ])
                   ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-3  shape" }, [
-                  _c("table", [
-                    _c("tr", [
-                      _c("td", [
-                        _vm._v(
-                          "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", [
-                        _c("img", {
-                          attrs: { src: "/img1.jpg", width: "100%" }
-                        })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-3   shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/img1.jpg", width: "100%" }
+                          })
+                        ])
                       ])
                     ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-3  shape" }, [
-                  _c("table", [
-                    _c("tr", [
-                      _c("td", [
-                        _vm._v(
-                          "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
-                        )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/img1.jpg", width: "100%" }
+                          })
+                        ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", [
-                        _c("img", {
-                          attrs: { src: "/img1.jpg", width: "100%" }
-                        })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/img1.jpg", width: "100%" }
+                          })
+                        ])
                       ])
                     ])
                   ])
                 ])
               ])
-            ])
-          ])
+            ]
+          )
         ])
       ])
     ])
@@ -42190,7 +42248,40 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(2)
+              _c("tr", [
+                _c("td", { staticClass: "spLeft" }, [
+                  _c(
+                    "div",
+                    { staticClass: "background-video-content" },
+                    [
+                      _c("h3", { staticClass: "spTitre" }, [
+                        _vm._v("Experiences")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { attrs: { id: "spParag" } }, [
+                        _vm._v(
+                          "Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        { attrs: { to: { name: "experiance" } } },
+                        [
+                          _c("button", { staticClass: "btn" }, [
+                            _vm._v("En savoir plus")
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("td"),
+                _vm._v(" "),
+                _c("td")
+              ])
             ])
           ]
         )
@@ -42201,16 +42292,16 @@ var render = function() {
       _c("div", { staticClass: "main-footer widgets-dark typo-light" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
-            _vm._m(3),
+            _vm._m(2),
             _vm._v(" "),
-            _vm._m(4),
+            _vm._m(3),
             _vm._v(" "),
             _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
               _c(
                 "div",
                 { staticClass: "widget no-box" },
                 [
-                  _vm._m(5),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c("p", [_vm._v("Accédez à nos activités")]),
                   _vm._v(" "),
@@ -42229,12 +42320,12 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(6)
+            _vm._m(5)
           ])
         ])
       ]),
       _vm._v(" "),
-      _vm._m(7)
+      _vm._m(6)
     ])
   ])
 }
@@ -42269,30 +42360,6 @@ var staticRenderFns = [
       },
       [_c("h2", [_vm._v("N'hésitez pas à découvrir")])]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("td", { staticClass: "spLeft" }, [
-        _c("div", { staticClass: "background-video-content" }, [
-          _c("h3", { staticClass: "spTitre" }, [_vm._v("Experiences")]),
-          _vm._v(" "),
-          _c("p", { attrs: { id: "spParag" } }, [
-            _vm._v(
-              "Lorem ipsum dolor sit Dolores illo repellat recusandae tempora eius."
-            )
-          ]),
-          _vm._v(" "),
-          _c("button", { staticClass: "btn" }, [_vm._v("En savoir plus")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("td"),
-      _vm._v(" "),
-      _c("td")
-    ])
   },
   function() {
     var _vm = this
