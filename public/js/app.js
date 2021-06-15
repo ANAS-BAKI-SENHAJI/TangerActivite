@@ -2913,12 +2913,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -8188,7 +8182,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-ead6c166] {\n    font-size: 14px;\n}\n.hero-section[data-v-ead6c166] {\n    height: 60vh;\n    align-items: center;\n    margin-top: -40px;\n    padding: 0%;\n}\n.title[data-v-ead6c166] {\n    font-size: 60px;\n    color: #ffffff;\n}\n.image[data-v-ead6c166]{\n    width: 100%;\n    border-radius: 10px;\n}\n.hero-section .HomeImage[data-v-ead6c166]{\n    width:100%;\n    height:100%;\n}\ntd[data-v-ead6c166]{\n    text-align: center;\n    padding: 10px;\n}\n.shape[data-v-ead6c166]{\n    border-radius: 10px;\n    margin-top: 10px ;\n    background-color: #ebebeb;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.small-text[data-v-ead6c166] {\n    font-size: 14px;\n}\n.hero-section[data-v-ead6c166] {\n    height: 60vh;\n    align-items: center;\n    margin-top: -40px;\n    padding: 0%;\n}\n.title[data-v-ead6c166] {\n    font-weight: bold;\n}\n.image[data-v-ead6c166]{\n    width: 100%;\n    border-radius: 10px;\n}\n.hero-section .HomeImage[data-v-ead6c166]{\n    width:100%;\n    height:100%;\n}\ntd[data-v-ead6c166]{\n    text-align: center;\n    padding: 10px;\n}\n.shape[data-v-ead6c166]{\n    border-radius: 10px;\n    margin-top: 10px ;\n    background-color: #ebebeb;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42008,9 +42002,9 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-md-3   shape" }, [
                     _c("table", [
                       _c("tr", [
-                        _c("td", [
+                        _c("td", { staticClass: "title" }, [
                           _vm._v(
-                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                            "\r\n                                        le 23/05/2021, Achakar.\r\n                                    "
                           )
                         ])
                       ]),
@@ -42018,7 +42012,7 @@ var staticRenderFns = [
                       _c("tr", [
                         _c("td", [
                           _c("img", {
-                            attrs: { src: "/img1.jpg", width: "100%" }
+                            attrs: { src: "/buggy1.jpg", width: "100%" }
                           })
                         ])
                       ])
@@ -42028,9 +42022,9 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-md-3 offset-md-1  shape" }, [
                     _c("table", [
                       _c("tr", [
-                        _c("td", [
+                        _c("td", { staticClass: "title" }, [
                           _vm._v(
-                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                            "\r\n                                        le 05/05/2021, Mnar.\r\n                                    "
                           )
                         ])
                       ]),
@@ -42038,7 +42032,7 @@ var staticRenderFns = [
                       _c("tr", [
                         _c("td", [
                           _c("img", {
-                            attrs: { src: "/img1.jpg", width: "100%" }
+                            attrs: { src: "/karting1.jpg", width: "100%" }
                           })
                         ])
                       ])
@@ -42048,9 +42042,9 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
                     _c("table", [
                       _c("tr", [
-                        _c("td", [
+                        _c("td", { staticClass: "title" }, [
                           _vm._v(
-                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                            "\r\n                                        le 15/04/2021, Achakar.\r\n                                    "
                           )
                         ])
                       ]),
@@ -42058,7 +42052,7 @@ var staticRenderFns = [
                       _c("tr", [
                         _c("td", [
                           _c("img", {
-                            attrs: { src: "/img1.jpg", width: "100%" }
+                            attrs: { src: "/buggy3.jpg", width: "100%" }
                           })
                         ])
                       ])
@@ -42072,9 +42066,9 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-md-3   shape" }, [
                     _c("table", [
                       _c("tr", [
-                        _c("td", [
+                        _c("td", { staticClass: "title" }, [
                           _vm._v(
-                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                            "\r\n                                        le 06/03/2021, Mellousa.\r\n                                    "
                           )
                         ])
                       ]),
@@ -42082,7 +42076,7 @@ var staticRenderFns = [
                       _c("tr", [
                         _c("td", [
                           _c("img", {
-                            attrs: { src: "/img1.jpg", width: "100%" }
+                            attrs: { src: "/quad1.jpg", width: "100%" }
                           })
                         ])
                       ])
@@ -42092,9 +42086,9 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
                     _c("table", [
                       _c("tr", [
-                        _c("td", [
+                        _c("td", { staticClass: "title" }, [
                           _vm._v(
-                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                            "\r\n                                        le 20/02/2021, Mnar.\r\n                                    "
                           )
                         ])
                       ]),
@@ -42102,7 +42096,7 @@ var staticRenderFns = [
                       _c("tr", [
                         _c("td", [
                           _c("img", {
-                            attrs: { src: "/img1.jpg", width: "100%" }
+                            attrs: { src: "/equitation3.jpg", width: "100%" }
                           })
                         ])
                       ])
@@ -42112,9 +42106,9 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
                     _c("table", [
                       _c("tr", [
-                        _c("td", [
+                        _c("td", { staticClass: "title" }, [
                           _vm._v(
-                            "\r\n                                        le 23/05/2020, cap spartel\r\n                                    "
+                            "\r\n                                        le 13/02/2020, Mellousa.\r\n                                    "
                           )
                         ])
                       ]),
@@ -42122,7 +42116,135 @@ var staticRenderFns = [
                       _c("tr", [
                         _c("td", [
                           _c("img", {
-                            attrs: { src: "/img1.jpg", width: "100%" }
+                            attrs: { src: "/quad3.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-3   shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", { staticClass: "title" }, [
+                          _vm._v(
+                            "\r\n                                        le 15/12/2019, Mnar.\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/paintball1.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", { staticClass: "title" }, [
+                          _vm._v(
+                            "\r\n                                        le 11/08/2019, Mellousa.\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/quad2.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", { staticClass: "title" }, [
+                          _vm._v(
+                            "\r\n                                        le 12/01/2020, Mnar.\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/paintball2.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-3   shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", { staticClass: "title" }, [
+                          _vm._v(
+                            "\r\n                                        le 22/02/2021, Mnar.\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/karting2.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", { staticClass: "title" }, [
+                          _vm._v(
+                            "\r\n                                        le 23/04/2019, Mellousa.\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/quad4.jpg", width: "100%" }
+                          })
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 offset-md-1 shape" }, [
+                    _c("table", [
+                      _c("tr", [
+                        _c("td", { staticClass: "title" }, [
+                          _vm._v(
+                            "\r\n                                        le 05/01/2021, Achakar.\r\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", [
+                          _c("img", {
+                            attrs: { src: "/equitation1.jpg", width: "100%" }
                           })
                         ])
                       ])
@@ -42294,7 +42416,32 @@ var render = function() {
           _c("div", { staticClass: "row" }, [
             _vm._m(2),
             _vm._v(" "),
-            _vm._m(3),
+            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+              _c("div", { staticClass: "widget no-box" }, [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("ul", { staticClass: "thumbnail-widget" }, [
+                  _c("li", [
+                    _c(
+                      "div",
+                      { staticClass: "thumb-content" },
+                      [
+                        _c(
+                          "router-link",
+                          { attrs: { to: { name: "experiance" } } },
+                          [
+                            _c("a", { attrs: { href: "" } }, [
+                              _vm._v(" En savoir plus")
+                            ])
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ])
+              ])
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
               _c(
@@ -42380,33 +42527,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
-      _c("div", { staticClass: "widget no-box" }, [
-        _c("h5", { staticClass: "widget-title" }, [
-          _vm._v("Liens"),
-          _c("span")
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "thumbnail-widget" }, [
-          _c("li", [
-            _c("div", { staticClass: "thumb-content" }, [
-              _c("a", { attrs: { href: "#." } }, [_vm._v("Get Started")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("div", { staticClass: "thumb-content" }, [
-              _c("a", { attrs: { href: "#." } }, [_vm._v("Top Leaders")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("div", { staticClass: "thumb-content" }, [
-              _c("a", { attrs: { href: "#." } }, [_vm._v("About")])
-            ])
-          ])
-        ])
-      ])
+    return _c("h5", { staticClass: "widget-title" }, [
+      _vm._v("Liens"),
+      _c("span")
     ])
   },
   function() {

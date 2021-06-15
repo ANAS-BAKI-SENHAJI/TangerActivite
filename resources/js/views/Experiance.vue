@@ -11,13 +11,13 @@
                         <div class="col-md-3   shape">
                             <table>
                                 <tr>
-                                    <td>
-                                        le 23/05/2020, cap spartel
+                                    <td class="title">
+                                        le 23/05/2021, Achakar.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/img1.jpg" width="100%">
+                                        <img src="/buggy1.jpg" width="100%">
                                     </td>
                                 </tr>
                             </table>
@@ -25,13 +25,13 @@
                         <div class="col-md-3 offset-md-1  shape">
                             <table>
                                 <tr>
-                                    <td>
-                                        le 23/05/2020, cap spartel
+                                    <td class="title">
+                                        le 05/05/2021, Mnar.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/img1.jpg" width="100%">
+                                        <img src="/karting1.jpg" width="100%">
                                     </td>
                                 </tr>
                             </table>
@@ -39,13 +39,13 @@
                         <div class="col-md-3 offset-md-1 shape">
                             <table>
                                 <tr>
-                                    <td>
-                                        le 23/05/2020, cap spartel
+                                    <td class="title">
+                                        le 15/04/2021, Achakar.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/img1.jpg" width="100%">
+                                        <img src="/buggy3.jpg" width="100%">
                                     </td>
                                 </tr>
                             </table>
@@ -57,27 +57,13 @@
                         <div class="col-md-3   shape">
                             <table>
                                 <tr>
-                                    <td>
-                                        le 23/05/2020, cap spartel
+                                    <td class="title">
+                                        le 06/03/2021, Mellousa.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/img1.jpg" width="100%">
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-md-3 offset-md-1 shape">
-                            <table>
-                                <tr>
-                                    <td>
-                                        le 23/05/2020, cap spartel
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="/img1.jpg" width="100%">
+                                        <img src="/quad1.jpg" width="100%">
                                     </td>
                                 </tr>
                             </table>
@@ -85,13 +71,119 @@
                         <div class="col-md-3 offset-md-1 shape">
                             <table>
                                 <tr>
-                                    <td>
-                                        le 23/05/2020, cap spartel
+                                    <td class="title">
+                                        le 20/02/2021, Mnar.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/img1.jpg" width="100%">
+                                        <img src="/equitation3.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 13/02/2020, Mellousa.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/quad3.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3   shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 15/12/2019, Mnar.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/paintball1.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 11/08/2019, Mellousa.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/quad2.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 12/01/2020, Mnar.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/paintball2.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3   shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 22/02/2021, Mnar.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/karting2.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 23/04/2019, Mellousa.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/quad4.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3 offset-md-1 shape">
+                            <table>
+                                <tr>
+                                    <td class="title">
+                                        le 05/01/2021, Achakar.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="/equitation1.jpg" width="100%">
                                     </td>
                                 </tr>
                             </table>
@@ -115,8 +207,7 @@
 
     }
     .title {
-        font-size: 60px;
-        color: #ffffff;
+        font-weight: bold;
     }
     .image{
         width: 100%;

@@ -94,13 +94,7 @@
 <h5 class="widget-title">Liens<span></span></h5>
 <ul class="thumbnail-widget">
 <li>
-<div class="thumb-content"><a href="#.">Get Started</a></div> 
-</li>
-<li>
-<div class="thumb-content"><a href="#.">Top Leaders</a></div> 
-</li>
-<li>
-<div class="thumb-content"><a href="#.">About</a></div> 
+<div class="thumb-content"><router-link :to="{name: 'experiance'}"><a href=""> En savoir plus</a></router-link></div> 
 </li>
 </ul>
 </div>
