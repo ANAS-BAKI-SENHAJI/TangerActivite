@@ -19,5 +19,16 @@
     
     {{-- <script src="{{ mix('js/bootstrap.js') }}"></script> --}}
     <script src="{{ mix('js/app.js') }}"></script>
+    <script>
+function resize(){
+    if ($(window).width() < 768) { 
+      $(".hero-section img").attr('src', '/homecov.png');
+  } else {
+    $(".hero-section img").attr('src', '/homepic.png');
+  }
+}
+resize();
+$(window).on('resize', resize);
+    </script>
 </body>
 </html>

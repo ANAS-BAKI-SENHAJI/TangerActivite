@@ -1,10 +1,10 @@
 <template>
         <div>
             <div class="container-fluid hero-section d-flex align-content-center justify-content-center flex-wrap ml-auto">
-                <img class="HomeImage" src="/cov.jpg" alt="">
+                <img class="HomeImage img-fluid" src="" alt="">
             </div>
             <div class="quote container-fluid d-flex align-content-center justify-content-center flex-wrap ml-auto">
-                <h2>N'hésitez pas à découvrir</h2>
+                <h2 class="text-capitalize">N'hésitez pas à découvrir</h2>
             </div>
             <div class="container">
                 <div class="row">
@@ -152,6 +152,7 @@
                 axios.get("api/activities/").then(response => this.activities = response.data) ,
                 this.isLoggedIn = localStorage.getItem('activityStore.jwt') != null     
             }
+            
         }
     </script>
 
@@ -179,14 +180,16 @@
     .hero-section .HomeImage{
         width:100%;
         height:100%;
+        
     }
     .quote{
-        background: black;
+        background: #141414;
         color: white;
         margin-top: 0%;
         padding: 10px;
         margin-bottom: 2%;
-        font-family: cursive;
+        font-family: "Gill Sans", sans-serif;
+        
     }
     table{
         border-collapse: collapse;
