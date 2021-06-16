@@ -41568,7 +41568,7 @@ var render = function() {
             _c(
               "router-link",
               { staticClass: "navbar-brand", attrs: { to: { name: "home" } } },
-              [_c("img", { attrs: { src: "logoTest2.png" } })]
+              [_c("img", { attrs: { src: "/logoTest2.png" } })]
             ),
             _vm._v(" "),
             _vm._m(0),
@@ -43091,7 +43091,7 @@ var render = function() {
               _c("td", { attrs: { width: "25%" } }, [
                 _c("h4", [
                   _c("span", { staticClass: "small-text  sizing" }, [
-                    _vm._v("Prix: " + _vm._s(_vm.activity.price) + "MAD")
+                    _vm._v("Prix: " + _vm._s(_vm.activity.price) + " MAD")
                   ])
                 ])
               ])

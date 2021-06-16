@@ -2,7 +2,7 @@
         <div>
             <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
                 <div class="container">
-                    <router-link :to="{name: 'home'}" class="navbar-brand"><img src="logoTest2.png"></router-link>
+                    <router-link :to="{name: 'home'}" class="navbar-brand"><img src="/logoTest2.png"></router-link>
                     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon "></span>
                     </button>

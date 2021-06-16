@@ -20,7 +20,7 @@
                         <tr> 
                              <td width="25%">
                                 <h4>
-                                    <span class="small-text  sizing">Prix: {{activity.price}}MAD</span>
+                                    <span class="small-text  sizing">Prix: {{activity.price}} MAD</span>
                                 </h4>
                              </td>   
                         </tr>        
