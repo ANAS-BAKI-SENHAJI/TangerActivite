@@ -2354,6 +2354,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -41283,7 +41285,7 @@ var render = function() {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(reservation.user_id))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(reservation.activity.name) + " ")]),
+            _c("td", [_vm._v(_vm._s(reservation.activity.name))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(reservation.reservation_date))]),
             _vm._v(" "),
@@ -41376,6 +41378,8 @@ var render = function() {
           return _c("tr", { key: index }, [
             _c("td", [_vm._v(_vm._s(index + 1))]),
             _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(user.id))]),
+            _vm._v(" "),
             _c("td", [_vm._v(_vm._s(user.name))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(user.phone))]),
@@ -41399,6 +41403,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
+        _c("td"),
+        _vm._v(" "),
         _c("td", [_vm._v("Utilisateur ID")]),
         _vm._v(" "),
         _c("td", [_vm._v("Nom")]),

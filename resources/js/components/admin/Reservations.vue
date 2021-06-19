@@ -17,7 +17,7 @@
                     <tr v-for="(reservation,index) in reservations" :key="index">
                         <td>{{index+1}}</td>
                         <td>{{reservation.user_id}}</td>
-                        <td>{{reservation.activity.name}} </td>
+                        <td>{{reservation.activity.name}}</td>
                         <td>{{reservation.reservation_date}}</td>
                         <td>{{reservation.activity.price}}</td>
                         <td>{{reservation.reservation_time}}</td>
