@@ -3,6 +3,7 @@
             <table class="table table-responsive table-striped">
                 <thead>
                     <tr>
+                        <td></td>
                         <td>Utilisateur ID</td>
                         <td>Nom</td>
                         <td>Numéro Tel</td>
@@ -14,6 +15,7 @@
                 <tbody>
                     <tr v-for="(user,index) in users" :key="index">
                         <td>{{index+1}}</td>
+                        <td>{{user.id}}</td>
                         <td>{{user.name}}</td>
                         <td>{{user.phone}}</td>
                         <td>{{user.email}}</td>
