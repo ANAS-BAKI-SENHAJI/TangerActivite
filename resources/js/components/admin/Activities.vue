@@ -97,6 +97,7 @@
 
                 axios.put(`/api/activities/${activity.id}`, {name, price, description, duration_of_activity, min_number_of_people, max_number_of_people, included_equipment, included_transport, equipments_included})
                      .then(response => this.activities[index] = activity)
+                     
             },
             addActivity(activity) {
                 this.addingActivity = null
@@ -114,6 +115,7 @@
 
                 axios.post("/api/activities/", {name, price, description, duration_of_activity, min_number_of_people, max_number_of_people, included_equipment, included_transport, equipments_included, image})
                      .then(response => this.activities.push(activity))
+                     
             },
 
 

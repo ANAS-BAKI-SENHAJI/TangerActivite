@@ -53,7 +53,7 @@
                     
                     <div>
                         <div v-if="!isLoggedIn">
-                            <h2>You need to login to continue</h2>
+                            <h2>Vous devez vous connecter pour continuer</h2>
                             <button class="col-md-4 btn btn-primary float-left" @click="login">Connexion</button>
                             <button class="col-md-4 btn btn-danger float-right" @click="register">Inscription</button>
                         </div>

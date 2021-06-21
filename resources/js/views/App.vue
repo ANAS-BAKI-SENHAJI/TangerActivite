@@ -11,13 +11,13 @@
                         <ul class="navbar-nav mr-auto"></ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
-                            <router-link :to="{ name: 'login' }" class="nav-link" v-if="!isLoggedIn">Login</router-link>
-                            <router-link :to="{ name: 'register' }" class="nav-link" v-if="!isLoggedIn">Register</router-link>
+                            <router-link :to="{ name: 'login' }" class="nav-link" v-if="!isLoggedIn">CONNEXION</router-link>
+                            <router-link :to="{ name: 'register' }" class="nav-link" v-if="!isLoggedIn">INSCRIPTION</router-link>
                             <span v-if="isLoggedIn">
                                 <router-link :to="{ name: 'userboard' }" class="nav-link" v-if="user_type == 0"> {{name}}</router-link>
                                 <router-link :to="{ name: 'admin' }" class="nav-link" v-if="user_type == 1"> {{name}}</router-link>
                             </span>
-                            <li class="nav-link" v-if="isLoggedIn" @click="logout"> Déconnexion</li>
+                            <li class="nav-link" v-if="isLoggedIn" @click="logout"> DÉCONNEXION</li>
                         </ul>
                     </div>
                 </div>
