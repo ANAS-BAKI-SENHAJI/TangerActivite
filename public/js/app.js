@@ -41989,7 +41989,7 @@ var staticRenderFns = [
         [
           _c("img", {
             staticClass: "HomeImage",
-            attrs: { src: "/img3.jpg", alt: "" }
+            attrs: { src: "/homePic.png", alt: "" }
           })
         ]
       ),
