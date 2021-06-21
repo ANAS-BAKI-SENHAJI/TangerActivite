@@ -21,10 +21,10 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script>
 function resize(){
-    if ($(window).width() < 768) { 
-      $(".hero-section img").attr('src', '/homecov.png');
+    if ($(window).width() < 1025) { 
+      $(".hero-section img").attr('src', '/homeCov.png');
   } else {
-    $(".hero-section img").attr('src', '/homepic.png');
+    $(".hero-section img").attr('src', '/homePic.png');
   }
 }
 resize();
